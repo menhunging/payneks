@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Thin.eot');
+    src: url('Mont-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Thin.woff2') format('woff2'),
+        url('Mont-Thin.woff') format('woff'),
+        url('Mont-Thin.ttf') format('truetype'),
+        url('Mont-Thin.svg#Mont-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Light.eot');
+    src: url('Mont-Light.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Light.woff2') format('woff2'),
+        url('Mont-Light.woff') format('woff'),
+        url('Mont-Light.ttf') format('truetype'),
+        url('Mont-Light.svg#Mont-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Black.eot');
+    src: url('Mont-Black.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Black.woff2') format('woff2'),
+        url('Mont-Black.woff') format('woff'),
+        url('Mont-Black.ttf') format('truetype'),
+        url('Mont-Black.svg#Mont-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-SemiBold.eot');
+    src: url('Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Mont-SemiBold.woff2') format('woff2'),
+        url('Mont-SemiBold.woff') format('woff'),
+        url('Mont-SemiBold.ttf') format('truetype'),
+        url('Mont-SemiBold.svg#Mont-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Bold.eot');
+    src: url('Mont-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Bold.woff2') format('woff2'),
+        url('Mont-Bold.woff') format('woff'),
+        url('Mont-Bold.ttf') format('truetype'),
+        url('Mont-Bold.svg#Mont-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Regular.eot');
+    src: url('Mont-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Regular.woff2') format('woff2'),
+        url('Mont-Regular.woff') format('woff'),
+        url('Mont-Regular.ttf') format('truetype'),
+        url('Mont-Regular.svg#Mont-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-RegularItalic.eot');
+    src: url('Mont-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mont-RegularItalic.woff2') format('woff2'),
+        url('Mont-RegularItalic.woff') format('woff'),
+        url('Mont-RegularItalic.ttf') format('truetype'),
+        url('Mont-RegularItalic.svg#Mont-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('Mont-Heavy.eot');
+    src: url('Mont-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Mont-Heavy.woff2') format('woff2'),
+        url('Mont-Heavy.woff') format('woff'),
+        url('Mont-Heavy.ttf') format('truetype'),
+        url('Mont-Heavy.svg#Mont-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
