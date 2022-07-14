@@ -1,0 +1,197 @@
+// 1599px
+@media (max-width: $maxMediaHD) {
+    .cabTable {
+        .num,
+        .txt {
+            max-width: 160px;
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }   
+          .slick-list{
+              min-width: 100%;
+              .slick-track{
+                  min-width: 100%;
+              }
+          }
+    }
+    .cabinetPage {
+        .tableCryptoHistory {
+            .cabTable {
+                .cabThead,
+                .cabTbody {
+                    .cabTd:nth-child(4) {
+                        width: 8%;
+                    }
+                }
+            }
+        }
+    }
+    .yourStores {
+        .yourStoresList {
+            .item {
+                padding: 0 15px 0px 35px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .col {
+                    padding: 15px 5px 15px 50px;
+                    width: calc(100% / 3 - 65px) !important;
+                    .iconBl {
+                        left: -10px;
+                        top: 14px;
+                    }
+                    &:first-child {
+                    }
+                }
+            }
+        }
+    }
+    .copyMessage {
+        top: calc(100% - 31px);
+    }
+    .tableCryptoHistory {
+        .copyMessage {
+            top: calc(100% - 27px);
+        }
+    }
+    .cabMenu {
+        .grettingsCab {
+            .line {
+                padding-right: 28px;
+            }
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                flex-wrap: wrap;
+                padding: 25px 55px 0 0;
+                .walletsCol {
+                    width: calc(100% / 4 - 75px);
+                    max-width: 100% !important;
+                    &.walletNumber{
+                        width: calc(100% / 4 - 75px);
+                    }
+                    .copyMessage {
+                        top: calc(100% - 26px);
+                        left: -5px;
+                    }
+                    &.walletChange {
+                        width: 100%;
+                        padding: 25px 0 25px 94px;
+                        display: flex;
+                        align-items: center;
+                        .tit {
+                            margin-bottom: 0;
+                        }
+                        .pr {
+                            margin: 0;
+                            margin-left: 5px;
+                        }
+
+                        .val {
+                            margin-top: 0;
+                            margin-left: 25px;
+                        }
+                        &::before {
+                            left: 40px;
+                            top: 50%;
+                            margin-top: -13px;
+                        }
+                    }
+                    .changeNameWallet {
+                        width: calc(100% + 50px);
+                    }
+                }
+            }
+        }
+    }
+    .cabinetBanners {
+        margin-top: 50px;
+        padding: 35px;
+    }
+    .settingsPage {
+        .inputForm {
+            padding: 50px 55px !important;
+        }
+        .settingRight {
+            .inputForm {
+                .inputLine {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+    .googleBlock {
+        label {
+            white-space: normal!important;
+            font-size: 14px;
+            display: block;
+            line-height: 14px;
+        }
+        .googlePicture {
+            margin-top: 15px;
+        }
+    }
+    .filterBl {
+        .inputForm {
+            padding: 0 25px;
+            .inputLine {
+                width: calc(20% - 10px) !important;
+                label {
+                    font-size: 14px;
+                }
+            }
+            .btn {
+                width: calc(20% - 10px) !important;
+                right: 0;
+            }
+        }
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .col {
+                    width: calc((100% - 105px) / 3);
+                    &:nth-child(4){
+                        width: calc((100% - 105px) / 3);
+                        order: 1;
+                        margin-top: 15px;
+                        left: 30px;
+                    }
+                    &:nth-child(6) {
+                        order: 1;
+                        left: 0;
+                        width: calc((100% - 105px) / 3 * 2);
+                    }
+                }
+                .shopBalance{
+                    order: 1;
+                }
+            }
+        }
+    }
+    .cabContent {
+        .btnBack {
+            right: 30px;
+            top: 35px;
+        }
+    }
+    /*animations*/
+    #canvas {
+        margin-left: -410px;
+    }
+}
+
+@media (max-width: 1439px) {
+    .cabTable {
+        .empty {
+            position: relative;
+            bottom: auto;
+            width: 100% !important;
+          }    
+    }
+}
+
+
+

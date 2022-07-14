@@ -1,0 +1,2317 @@
+@media (min-width: $minMediaXS) {
+    .youBalance {
+        .listBalance {
+            display: flex !important;
+            &.slick-initialized{
+                display: block !important;            
+            }          
+        }
+    }
+}
+//767px
+@media (max-width: $maxMediaXS) {
+    .container {
+        width: $containerXS;
+        padding: 0 10px;
+    }
+    .header {
+        &::before {
+            margin-left: -450px;
+            bottom: -80px;
+            background-image: url("../img/back_bot_gretting_640.png");
+            width: 957px;
+            height: 104px;
+        }
+        &::after {
+            display: none;
+        }
+        padding: 13px 0 0;
+        .headerWrap {
+            .logo {
+                top: -4px;
+            }
+            .authBlock {
+                margin-left: 73px;
+                .signUp {
+                    padding: 7px 21px;
+                    margin-left: 18px;
+                }
+            }
+            .langBlock {
+                margin-left: 16px;
+            }
+        }
+        .paymentMethodsCount {
+            right: -200px;
+            bottom: -125px;
+            @include transform(scale(0.6));
+        }
+    }
+    .menuBurger {
+        top: 15px;
+    }
+    .grettingsBlock {
+        padding: 96px 0 77px;
+        .grettingCap {
+            font-size: 37px;
+            line-height: 50px;
+            padding-right: 50px;
+            & + .grettingText {
+                margin-top: 20px;
+            }
+        }
+        .grettingText {
+            font-size: 15px;
+            line-height: 26px;
+        }
+
+        .btn {
+            margin-top: 48px;
+            padding: 10px 26px;
+            font-size: 14px;
+            left: 10px;
+        }
+    }
+    .btn {
+        &.btnBorder {
+            &::before {
+                width: calc(100% + 22px);
+                height: calc(100% + 17px);
+                left: -10px;
+                top: -9px;
+            }
+        }
+    }
+    .stateLine {
+        padding: 114px 0 0;
+        .stateList {
+            .item {
+                position: relative;
+                padding-right: 45px;
+                .iconBl {
+                    position: absolute;
+                    left: 5px;
+                    top: -4px;
+                    font-size: 36px;
+                }
+                .name {
+                    padding-left: 40px;
+                }
+                .txt {
+                    margin-top: 16px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .textBlockWrap {
+        padding: 49px 0 72px;
+        .wrap {
+            .picture {
+                top: -12px;
+                left: 0px !important;
+                background-size: contain;
+            }
+            .textBlock {
+                margin-top: -5px;
+                .capSite {
+                    font-size: 20px;
+                    line-height: 30px;
+                    & + ul {
+                        margin-top: 26px;
+                    }
+                }
+                ul {
+                    li {
+                        font-size: 15px;
+                        & + li {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+                .btn {
+                    padding: 11px 25px;
+                    margin-top: 44px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .cryptoBlock {
+        padding: 37px 0 60px;
+        .wrap {
+            .cryptoList {
+                margin-top: 34px;
+                width: calc(100% + 10px);
+                left: -5px;
+                .cryptoItem {
+                    padding: 15px 5px;
+                    .item {
+                        & + .item {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            .capSite {
+                font-size: 20px;
+            }
+            .cryptoDesc {
+                font-size: 15px;
+                line-height: 25px;
+                letter-spacing: 0;
+                margin-top: 30px;
+                max-width: 100%;
+                padding: 0 0px;
+                .linkSite {
+                    font-size: 15px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .howConnectBlock {
+        padding: 52px 0 16px;
+        .wrap {
+            .connectList {
+                margin-top: 33px;
+                .connectItem {
+                    margin-bottom: 37px;
+                    .picture {
+                        @include transform(scale(0.7));
+                        & + .name {
+                            margin-top: -9px;
+                        }
+                    }
+                    .name {
+                        & + .txt {
+                            margin-top: 2px;
+                        }
+                    }
+                    &::before {
+                        left: calc(50% + 62px);
+                        top: 71px;
+                        background-size: 95%;
+                        background-repeat: no-repeat;
+                    }
+                    &:nth-child(2n) {
+                        &:before {
+                            top: 61px;
+                            background-position: -130px center;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &:after {
+                            right: calc(50% + 35px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .capSite {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .whyBlock {
+        padding: 17px 0;
+        margin-bottom: 155px;
+        .capSite {
+            font-size: 30px;
+        }
+        .textBlockWrap {
+            .wrap {
+                padding: 35px 0 41px;
+                .textBlock {
+                    margin-top: -7px;
+                    .capSite {
+                        font-size: 17px;
+                        & + * {
+                            margin-top: -6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .textToh {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .footer {
+        &:after {
+            display: none;
+        }
+        &:before {
+            background-image: url("../img/back_top_footer_640.png");
+            width: 995px;
+            height: 125px;
+            margin-left: -580px;
+            top: -123px;
+        }
+        .footerWrap {
+            .footerLeft {
+                margin-top: -33px;
+            }
+            .footerRight {
+                top: -79px;
+                .footerMenu {
+                    margin: -6px -15px;
+                    .link {
+                        margin: 6px 15px;
+                    }
+                }
+            }
+            .copyRight {
+                margin-top: 56px;
+            }
+        }
+    }
+    .innerPage {
+        .header {
+            &:before {
+                top: -220px;
+                margin-left: -1130px;
+                width: 2033px;
+            }
+        }
+    }
+    .faqPage {
+        min-height: auto;
+        padding: 93px 0 200px;
+        .faqTabs {
+            flex-wrap: wrap;
+            .listLinks {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: calc(100% / 3);
+                    text-align: center;
+                    a {
+                        font-size: 18px;
+                        line-height: 24px;
+                        padding: 12px 0;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    & + li {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .tabsBody {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+    .innerPage {
+        .footer {
+            &:before {
+                margin-left: -580px;
+            }
+        }
+    }
+    .grettingsPage {
+        .grettingCap {
+            font-size: 40px;
+        }
+    }
+    .contactsInfo {
+        padding: 50px 0;
+        .contactsList {
+            .contactItem {
+                padding-left: 140px;
+                .tit {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                .linkSite {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                .pic {
+                    @include transform(scale(0.7));
+                    top: -61px;
+                }
+                & + .contactItem {
+                    margin-top: -35px;
+                }
+            }
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                    height: 320px;
+                    background-size: contain;
+                }
+                .textBlock {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+    .documentsPageWrap {
+        flex-wrap: wrap;
+        .docLeft {
+            width: 100%;
+        }
+        .docRight {
+            width: 100%;
+            margin-top: 50px;
+        }
+        .docMenu {
+            .docMenuList {
+                flex-wrap: wrap;
+                display: flex;
+                & > li {
+                    width: calc(50% - 15px);
+                    margin-bottom: 15px;
+                    a {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    & + li {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .documentsPage {
+        padding: 103px 0 163px;
+        .docRight {
+            .textSimple {
+                p {
+                    & + p {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .textLine {
+        font-size: 15px;
+        line-height: 24px;
+        a {
+            font-size: 15px;
+        }
+    }
+    .systemPage {
+        .systemtext {
+            .textBlockWrap {
+                .wrap {
+                    .picture {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            .wrap {
+                .textBlock {
+                    .btn {
+                        padding: 10px 45px;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .aboutInNumbers {
+        .wrap {
+            .list {
+                .item {
+                    padding: 89px 5px 23px 17px;
+                    .num {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                    .txt {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .text {
+                font-size: 15px;
+                line-height: 24px;
+                span {
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .joinBl {
+        flex-wrap: wrap;
+        .text {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+    .partnersPage {
+        .howConnectBlock {
+            padding: 52px 0 30px;
+        }
+        .textBlockWrap {
+            .wrap {
+                .textBlock {
+                    .capSite {
+                        font-size: 30px;
+                        line-height: 40px;
+                        & + * {
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .calcProfit {
+        padding: 50px 0 170px;
+        .calcProgWrap {
+            padding: 35px;
+        }
+        .calcProfitList {
+            margin-top: 20px;
+        }
+        .calcProfitLeft {
+            .capSite {
+                line-height: 30px;
+            }
+        }
+        .calcProfitRight {
+            .joinBl {
+                padding: 44px 15px 10px 0;
+            }
+        }
+    }
+    .joinBl .btn {
+        padding: 11px 45px;
+        top: 3px;
+    }
+    .mershPage {
+        .aboutInNumbers {
+            .wrap {
+                .left {
+                }
+                .text {
+                    & + .capSite {
+                    }
+                }
+            }
+        }
+
+        .mersInfoWrap {
+            .infoMersh {
+                li {
+                    width: 100%;
+                    padding-left: 167px;
+                    margin-bottom: 55px;
+                    & + li {
+                    }
+                    .picture {
+                        left: -20px;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .developersPage {
+        .fastStartBlock {
+            .fastStartList {
+                .item {
+                    .btn {
+                        padding: 12px 35px;
+                        margin-top: 30px;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+        .apiLine {
+            .list {
+                .item {
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0;
+                    padding: 25px;
+                    min-height: auto;
+                    & + .item {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .tarifsBlock {
+        .wrap {
+            display: block;
+            .tarifsTableWrap {
+                margin-top: 68px;
+                overflow: auto;
+                position: relative;
+                width: auto;
+                margin-left: -10px;
+                margin-right: -10px;
+                .table {
+                    padding: 0 10px;
+                    width: 920px;
+                }
+                .tarifsTable {
+                    width: 100%;
+                    position: relative;
+
+                    .tarifsHead {
+                    }
+                    .tarifsBody {
+                    }
+                }
+            }
+
+            .joinBl {
+                .text {
+                    span {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .cabTop {
+        .logo {
+            left: 7px;
+        }
+    }
+    .menuLineMobile {
+        .menuBurger {
+            right: 21px;
+            top: 35px;
+        }
+    }
+    .cabMenu {
+        .grettingsCab {
+            .line {
+                padding: 18px 15px 15px 72px;
+                width: 50%;
+                .iconBl {
+                    left: 8px;
+                }
+            }
+        }
+        .btnLine {
+            padding: 40px 25px 26px;
+        }
+    }
+    .hideZeroBalance {
+        top: 42px;
+        right: 11px;
+    }
+    .youBalance {
+        position: relative;
+        flex-wrap: wrap;
+        overflow: visible;
+        padding: 40px 20px 30px 75px;
+        .circle {
+            display: block;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            background-color: $back3;
+            @include border-radius(50%);
+            position: absolute;
+            right: 15px;
+            top: 45px;
+            z-index: 5;
+            text-align: center;
+            @include transition(all 0.3s);
+            &.open {
+                background-color: $color4;
+                @include transform(rotate(#{-180}deg));
+
+                &::before {
+                    color: $colorWhite;
+                }
+            }
+            &::before {
+                content: "\e928";
+                font-family: "icomoon" !important;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 40px;
+                margin-top: -20px;
+                @include transition(all 0.3s);
+                background-repeat: no-repeat;
+                background-position: center;
+                font-size: 12px;
+                line-height: 50px;
+            }
+            &:hover {
+                background-color: $color4;
+                color: $colorWhite;
+            }
+        }
+        .listBalance {
+            display: none;
+            order: 3;
+            left: 0;
+            position: absolute;
+            margin: 0 -5px;
+            padding: 25px 15px 15px;
+            width: calc(100% + 180px);
+            max-width: 100%;
+            top: calc(100% - 25px);
+            background-color: $colorWhite;
+
+            .item {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% / 3 - 13px);
+                margin: 5px;
+            }
+        }
+        .balance {
+            width: 80%;
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                padding: 25px 85px 0 0;
+                .walletsCol {
+                    width: 50% !important;
+                    max-width: 100% !important;
+                    .num{
+                        max-width: 90%;
+                    }
+                    .copyMessage {
+                        top: calc(100% - 40px);
+                        left: 50%;
+                        margin-left: -42px;
+                      }
+                    &.walletChange {
+                        width: 100% !important;
+                    }
+                    &.walletNumber {
+                        width: 50% !important;
+                        padding: 15px 5px 15px 94px;
+                        .tit {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    &.walletBalance {
+                        width: 50% !important;
+                        padding: 15px 0;
+                        display: block;
+                        .tit {
+                            margin-bottom: 15px;
+                        }
+                        .balanceVal {
+                            margin: 0;
+                            & + .balanceVal {
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    .visKey{
+                        padding-top: 0;
+                        left: 79px;
+                    }
+                }
+            }
+        }
+    }
+    .cabinetBanners {
+        margin-top: 30px;
+        padding: 15px;
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .shopBalance {
+                    padding: 25px 25px 25px 81px;
+                    .iconBl {
+                        left: 28px;
+                    }
+                }
+            }
+        }
+    }
+    .createShopBlock {
+        padding: 30px;
+        .inputForm {
+            order: 0;
+        }
+        .currencyCreate {
+            padding: 15px 0;
+            width: 100%;
+            order: 1;
+            .currencylist {
+                margin-top: 15px;
+            }
+        }
+        .textInfo {
+            margin-top: 30px;
+            order: 2;
+            width: 100%;
+            .checkBlock {
+                max-width: 260px;
+                margin-top: 20px;
+            }
+        }
+        .btn {
+            order: 2;
+        }
+    }
+    .shop {
+        .shopName {
+            display: block;
+            max-width: 100%;
+            .capSite {
+                max-width: 100%;
+            }
+
+            .btn {
+                top: 0;
+                margin-top: 10px;
+            }
+        }
+        .connectedCurrrencies {
+            .listCurrenceis {
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        align-items: flex-start;
+                        .col {
+                            width: calc(50% - 36px);
+                        }
+                        .btn {
+                            width: 100%;
+                            max-width: 100%;
+                            & + .btn {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    .circle {
+                        margin-top: 0;
+                        top: 30px;
+                    }
+                    .checkBlock {
+                        left: 25px;
+                        top: 28px;
+                        margin-top: 0;
+                    }
+                }
+            }
+            .btnCreateWallet {
+                top: 15px;
+            }
+        }
+    }
+    .textSimple {
+        h3 {
+            line-height: 40px;
+            margin-top: 30px;
+            + * {
+                margin-top: 15px;
+            }
+        }
+    }
+    .contactsForm {
+        .wrap {
+            .inputForm {
+                .btnLine {
+                    .btn {
+                        padding: 10px 45px;
+                    }
+                }
+            }
+        }
+    }
+    .settingsPage {
+        flex-wrap: wrap;
+        .settingLeft,
+        .settingRight {
+            width: 100%;
+        }
+        .settingRight {
+            margin-top: 30px;
+            .inputForm {
+                .inputLine {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .inputForm {
+            margin-top: 15px;
+            padding: 30px !important;
+            .inputLine {
+                margin: 0;
+                & + .inputLine {
+                    margin-top: 15px !important;
+                }
+            }
+            .btn {
+                margin-top: 30px !important;
+            }
+        }
+    }
+    .supportBlock {
+        .supportRight {
+            .btnLine {
+                .btn {
+                    padding: 10px 45px;
+                    left: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .pageWrapper {
+        .btn {
+            font-size: 15px !important;
+        }
+    }
+    .googleBlock {
+        margin: 0;
+    }
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+    .modalsScroll {
+        .closeModal {
+            top: 17px;
+        }
+    }
+    .modalsContent {
+        .inputForm {
+            padding: 0;
+        }
+        .btn {
+            padding: 10px 26px !important;
+            font-size: 15px !important;
+            width: auto !important;
+        }
+    }
+    .loginModals {
+        .inputForm {
+            .inputLine {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            .checkBlock {
+                width: 100%;
+                padding: 15px 0 30px;
+                order: 3;
+            }
+        }
+        .lineHandler {
+            display: block;
+            order: 4;
+            .captchaBlock {
+                margin: 0 auto;
+                display: table;
+            }
+            .btn {
+                display: table;
+                margin: 30px auto 0;
+                right: auto;
+                top: auto;
+            }
+        }
+        .linksModals {
+            margin-top: 30px;
+            padding: 30px 0;
+        }
+    }
+    .getCryptoModals {
+        .lineHandler {
+            .btn {
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+    .createWalletModal {
+        .btn {
+            margin-top: 0;
+        }
+    }
+    .cabinetWallets {
+        .createStore {
+            top: -38px;
+        }
+    }
+}
+
+//639px
+@media (max-width: $maxMediaXSS) {
+    .header {
+        padding: 13px 0 0;
+        &::before {
+            margin-left: -500px;
+        }
+        .headerWrap {
+            .logo {
+                top: -4px;
+            }
+            .authBlock {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-left: 0;
+                .signUp {
+                    padding: 7px 21px;
+                    margin-left: 18px;
+                }
+            }
+            .langBlock {
+                order: 2;
+            }
+            .nav {
+                top: calc(100% - 24px);
+            }
+        }
+        .paymentMethodsCount {
+            right: -200px;
+            bottom: -125px;
+            @include transform(scale(0.6));
+        }
+    }
+    .grettingsBlock {
+        padding: 50px 0 70px;
+        .grettingCap {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        .grettingText {
+            line-height: 24px;
+        }
+    }
+    .stateLine {
+        .stateList {
+            flex-wrap: wrap;
+            .item {
+                width: 100%;
+                & + .item {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    .cryptoBlock {
+        .wrap {
+            .cryptoList {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+    .howConnectBlock {
+        .wrap {
+            .connectList {
+                .connectItem {
+                    &:after,
+                    &:before {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    .whyTabs {
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                    top: 0;
+                    left: 0;
+                    height: 300px;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    .footer {
+        .footerWrap {
+            .wrap {
+                flex-wrap: wrap;
+            }
+            .footerLeft {
+                width: 100%;
+                max-width: 100%;
+                margin-top: -33px;
+            }
+            .footerRight {
+                width: 100%;
+                max-width: 100%;
+                top: 0;
+                margin-top: 50px;
+            }
+        }
+    }
+    .faqPage {
+        .faqTabs {
+            .listLinks {
+                justify-content: space-between;
+                li {
+                    width: calc(50% - 5px);
+                    a {
+                    }
+                    & + li {
+                    }
+                }
+            }
+            .tabsBody {
+                margin-top: 20px;
+            }
+        }
+    }
+    .textSimple {
+        h2 {
+            font-size: 26px;
+            line-height: 32px;
+            & + * {
+                margin-top: 30px;
+            }
+        }
+        h3 {
+            margin-top: 40px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+        & > span {
+            font-size: 16px;
+            line-height: 25px;
+        }
+        ul {
+            li {
+                font-size: 16px;
+                line-height: 24px;
+                & + li {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .searchBlock {
+        input {
+            font-size: 12px;
+        }
+    }
+    .grettingsPage {
+        padding: 44px 0 0;
+        .grettingCap {
+            font-size: 30px;
+            line-height: 40px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .contactsInfo {
+        padding: 50px 0;
+        .contactsList {
+            .contactItem {
+                padding-left: 140px;
+                .tit {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                .linkSite {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                .pic {
+                    @include transform(scale(0.7));
+                    top: -61px;
+                }
+                & + .contactItem {
+                    margin-top: -35px;
+                }
+            }
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                    height: 250px;
+                }
+                .textBlock {
+                    margin-top: 50px;
+                    .capSite {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .grettingsPage {
+        .menu {
+            margin-top: 0;
+            overflow: auto;
+        }
+    }
+    .documentsPage {
+        padding: 90px 0 163px;
+        .docMenu {
+            .docMenuList {
+                & > li {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .docRight {
+            margin-top: 20px;
+            .textSimple {
+                p {
+                    font-size: 15px;
+                    line-height: 24px;
+                    a {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .aboutInNumbers {
+        .wrap {
+            .list {
+                .item {
+                    width: calc(50% - 6px);
+                }
+            }
+        }
+    }
+    .calcProfit {
+        .calcProfitList {
+            .item {
+                .calcPr {
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+                .value {
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+                & + .item {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .calcProgWrap {
+            .line {
+                .tit {
+                    width: 100%;
+                }
+                .inputBlock {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
+                & + .line {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .aboutInNumbers {
+        padding: 30px 0 150px;
+        .wrap {
+            .text {
+                margin-top: 30px;
+            }
+            .list {
+                &.horizont {
+                    .item {
+                        width: calc(50% - 10px);
+                        padding: 15px 15px 15px;
+                        .iconBl {
+                            top: 20px;
+                            right: 17px;
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mershPage {
+        .aboutInNumbers {
+            .joinBl {
+                padding-top: 0;
+            }
+        }
+    }
+    .developersPage {
+        .fastStartBlock {
+            .fastStartTop {
+                .textBlock {
+                    .capSite {
+                        font-size: 25px;
+                        line-height: 36px;
+                    }
+                }
+
+                .picture {
+                    height: 360px;
+                }
+            }
+        }
+    }
+    .cabinetPage {
+        .tableCryptoBalance {
+            .cabTable {
+                .cabTbody {
+                    .cabTd {
+                        &:nth-child(5) {
+                            width: 50% !important;
+                        }
+                        &:nth-child(6) {
+                            width: 50% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .yourStores {
+        .createStore {
+            top: 65px;
+        }
+        .yourStoresList {
+            margin: 30px -15px 0;
+            .item {
+                margin: 0 15px 15px;
+                width: 100%;
+                @include box-shadow($shadow3);
+                & + .item {
+                    margin-top: 0;
+                }
+            }
+        }
+        .slick-prev {
+            color: transparent;
+            background-image: url("../img/arrow_left.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+        }
+        .slick-next {
+            color: transparent;
+            background-image: url("../img/arrow_right.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            right: 15px;
+            bottom: 5px;
+        }
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 25px;
+            li {
+                cursor: pointer;
+                margin: 0 5px;
+                color: transparent;
+                @include border-radius(50%);
+                width: 22px;
+                height: 22px;
+                border: dashed 1px $textColor6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include transition(all 0.3s);
+                button {
+                    cursor: pointer;
+                    color: transparent;
+                    background: transparent;
+                    @include border-radius(50%);
+                    width: 12px;
+                    height: 12px;
+                    @include transition(all 0.3s);
+                }
+                &.slick-active {
+                    button {
+                        background-color: $colorBlack;
+                    }
+                }
+            }
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                padding: 25px 5px 0 0;
+                .walletsCol {
+                    &.walletChange {
+                        padding: 15px 0 15px 94px;
+                        display: block;
+                        .val {
+                            margin-left: 0;
+                        }
+                    }
+                    &.walletNumber {
+                    }
+                    &.walletBalance {
+                    }
+                    .copyMessage {
+                      
+                        margin-left: -25px;
+                      }
+                }
+            }
+            .walletsText {
+                padding: 15px;
+            }
+        }
+    }
+    .cabinetBanners {
+        .listBanners {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+        }
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .col {
+                    width: calc(100% - 50px) !important;
+                    margin: 15px 25px;
+                    left: 0 !important;
+                    &:first-child {
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+    .cabContent {
+        .btnBack {
+            top: auto;
+            position: relative;
+            right: auto;
+            margin-bottom: 25px;
+        }
+    }
+    .docsDeveloper {
+        .listText {
+            .item {
+                padding: 30px;
+            }
+        }
+        .infoTextIp {
+            padding: 15px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+    .inputForm {
+        .inputLine {
+            .impTxt {
+                top: 100%;
+            }
+        }
+    }
+    .shop {
+        .shopInfo {
+            .item {
+                width: 100%;
+            }
+        }
+        .connectedCurrrencies {
+            .listCurrenceis {
+                margin-top: 30px;
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        padding: 31px 0 20px 90px;
+                        .col {
+                            width: calc(50% - 15px);
+                            .pic {
+                                margin-top: 39px;
+                            }
+                        }
+                        .btn {
+                            width: 100%;
+                            max-width: 100%;
+                            & + .btn {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    .circle {
+                        margin-top: 0;
+                        top: 30px;
+                    }
+                    .checkBlock {
+                        left: 25px;
+                        top: 28px;
+                        margin-top: 0;
+                    }
+                }
+            }
+            .btnCreateWallet {
+                top: auto;
+                position: relative;
+                right: auto;
+                margin-bottom: 21px;
+            }
+        }
+        .shopTabs {
+            .shopSettings {
+                .inputForm {
+                    .inputLine {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .timeAdress {
+            .inputForm {
+                .btn {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    .partnersPage {
+        .textBlockWrap {
+            padding: 0 0 52px;
+        }
+    }
+    .createShopBlock {
+        .inputForm {
+            .inputLine {
+                .impTxt {
+                    top: calc(100% + 5px);
+                }
+            }
+        }
+    }
+    .restoreModals {
+        .inputForm {
+            .inputLine {
+                width: 100%;
+            }
+        }
+    }
+    .sendCoinModal {
+        .inputForm {
+            .inputLine {
+                &.inputCommision {
+                    .selectric-wrapper {
+                        width: 100%;
+                    }
+                    .valueBlock {
+                        width: 100%;
+                        margin-top: 25px;
+                    }
+                }
+            }
+            .btnLine {
+                flex-wrap: wrap;
+                margin: 25px 0 0;
+                .checkBlock {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+                .btn {
+                }
+            }
+        }
+    }
+}
+
+//479px
+@media (max-width: $maxMediaXSSS) {
+    .cabTable{
+        &.empty{
+            .slick-dots{
+                display: none;
+            }
+        }    
+    }
+    .header {
+        padding: 13px 0 0;
+        &::before {
+            margin-left: -559px;
+        }
+        .headerWrap {
+            justify-content: space-between;
+            .logo {
+            }
+            .nav {
+                top: calc(100% - 50px);
+            }
+            .authBlock {
+                width: 70%;
+                margin-left: 0;
+                margin-top: 21px;
+                justify-content: flex-start;
+                left: -3px;
+                position: relative;
+                .signUp {
+                    margin-left: 16px;
+                }
+            }
+            .langBlock {
+                width: 82px;
+                order: 4;
+                margin: 0;
+                margin-top: 24px;
+            }
+        }
+        .paymentMethodsCount {
+            right: -215px;
+            bottom: -124px;
+        }
+    }
+    .grettingsBlock {
+        .grettingCap {
+            padding-right: 20px;
+        }
+    }
+    .stateLine {
+        padding: 122px 0 0;
+        .stateList {
+            .item {
+                padding-right: 0;
+                & + .item {
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+    .textBlockWrap {
+        padding: 0 0 52px;
+        .wrap {
+            .picture {
+                height: 300px;
+            }
+            .textBlock {
+                .capSite {
+                    & + ul {
+                        margin-top: 15px;
+                    }
+                }
+                ul {
+                    li {
+                        padding-left: 19px;
+                        line-height: 22px;
+                    }
+                }
+                .btn {
+                    font-size: 15px;
+                    padding: 11px 25px;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    .capSite {
+        line-height: 30px;
+    }
+    .cryptoBlock {
+        padding: 40px 0;
+        .wrap {
+            .cryptoList {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cryptoDesc {
+            }
+        }
+    }
+    .howConnectBlock {
+        .wrap {
+            .connectList {
+                margin-top: 7px;
+                .connectItem {
+                    margin-bottom: 14px;
+                    width: 100%;
+                    .picture {
+                        & + .name {
+                            margin-top: -9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .whyBlock {
+        padding: 11px 0;
+        margin-bottom: 161px;
+    }
+    .whyTabs {
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                    height: 280px;
+                }
+            }
+        }
+    }
+    .footer {
+        .footerWrap {
+            .copyRight {
+                margin-top: 40px;
+            }
+        }
+        &::before {
+            margin-left: -420px;
+        }
+    }
+    .grettingsPage {
+        padding: 35px 0 0;
+    }
+    .faqPage {
+        .faqTabs {
+            .listLinks {
+                li {
+                    a {
+                        font-size: 15px;
+                        padding: 8px 0;
+                    }
+                }
+            }
+        }
+    }
+    .contactsInfo {
+        padding: 50px 0;
+        .contactsList {
+            .contactItem {
+                padding-left: 0;
+                .tit {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                .pic {
+                    position: relative;
+                    left: -45px;
+                    margin-bottom: -100px;
+                }
+            }
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                }
+                .textBlock {
+                    margin-top: 25px;
+                    .capSite {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .supportBlock {
+        .supportRight {
+            .inputForm {
+                padding: 35px 15px 70px;
+                .inputLine {
+                    width: 100% !important;
+                }
+                .btnLine {
+                    display: block;
+                    .btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .contactsForm {
+        .wrap {
+            .inputForm {
+                padding: 35px 15px 70px;
+                .inputLine {
+                    width: 100% !important;
+                }
+                .btnLine {
+                    display: block;
+                    .btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .contactText {
+                .text {
+                    line-height: 24px;
+                }
+                .linkSite {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .cabContent {
+        .btnBorder {
+            text-align: center;
+            left: 0;
+            position: relative;
+            margin: 25px 0 0;
+            display: table;
+            max-width: 320px;
+            padding: 10px 15px !important;
+            min-width: 160px;
+            font-size: 15px !important;
+            &::before {
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+        .btnCreateWallet {
+            padding-left: 55px !important;
+        }
+        .btnDelete {
+            padding-left: 45px !important;
+        }
+    }
+    .innerPage {
+        .btnBorder {
+            text-align: center;
+            left: 5px !important;
+            position: relative;
+            margin: 0;
+            top: 0;
+            display: table;
+            max-width: 320px;
+            padding: 10px 15px !important;
+            min-width: 160px;
+            font-size: 15px !important;
+        }
+    }
+    .aboutInNumbers {
+        .wrap {
+            .list {
+                .item {
+                    .num {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                    .txt {
+                        font-size: 13px;
+                        line-height: 20px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .joinBl {
+        padding: 0;
+    }
+    .calcProfit {
+        padding: 30px 0 150px;
+        .calcProgWrap {
+            padding: 20px;
+            .line {
+                .tit {
+                    line-height: 24px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .calcProfitLeft {
+            .capSite {
+                max-width: 100%;
+            }
+        }
+        .calcProfitList {
+            .item {
+                .calcPr {
+                    margin: 15px -5px 0;
+                }
+                .value {
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+    .mershPage {
+        .mersInfoWrap {
+            .infoMersh {
+                li {
+                    padding-left: 0;
+                    margin-bottom: 35px;
+                    .picture {
+                        left: -30px;
+                        top: 10px;
+                        position: relative;
+                        margin-bottom: -25px;
+                    }
+                }
+            }
+        }
+        .aboutInNumbers {
+            .wrap {
+                .text {
+                    span {
+                        font-size: 17px;
+                        max-width: 100%;
+                    }
+                }
+            }
+            .joinBl {
+                .btn {
+                    top: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .aboutInNumbers {
+        .wrap {
+            .list {
+                &.horizont {
+                    .item {
+                        width: 100%;
+                        padding: 15px 15px 15px;
+                    }
+                }
+            }
+            .text {
+                span {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .developersPage {
+        padding-bottom: 80px;
+        .fastStartBlock {
+            .fastStartList {
+                .item {
+                    .txt {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .fastStartTop {
+                .picture {
+                    height: 280px;
+                }
+            }
+        }
+        .apiLine {
+            padding: 20px 0 50px;
+            .list {
+                .item {
+                    .linkSite {
+                        display: table;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .textBlockWrap:not(.textLeft) {
+            .wrap {
+                .picture {
+                    height: 280px;
+                    top: 0;
+                }
+            }
+        }
+    }
+    .tarifsBlock {
+        .wrap {
+            .joinBl {
+                margin-top: 35px;
+            }
+        }
+    }
+    .menuLineMobile {
+        z-index: 10;
+    }
+    .youBalance {
+        z-index: 9;
+        .listBalance {
+            .item {
+                width: 100%;
+            }
+        }
+    }
+    .cabMenu {
+        .grettingsCab {
+            padding: 10px 0 15px;
+            flex-wrap: wrap;
+            .line {
+                width: 100%;
+                padding: 10px 15px 10px 72px;
+            }
+        }
+        .btnLine {
+            padding: 40px 10px 26px;
+        }
+    }
+    .hideZeroBalance {
+        top: auto;
+        right: auto;
+        position: relative;
+        padding: 25px 10px;
+    }
+    .cabinetPage {
+        .tableCryptoBalance {
+            padding: 0;
+            .cabTable {
+                .cabTbody {
+                    .cabTd {
+                        &:nth-child(5) {
+                            width: 100% !important;
+                        }
+                        &:nth-child(6) {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cryptoList,
+    .yourStores,
+    .cabTable {
+        .slick-dots {
+            margin-top: 15px;
+            li {
+                margin: 0 2px;
+            }
+        }
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+    }
+    .yourStores {
+        padding-top: 30px;
+        .yourStoresList {
+            margin-top: 15px;
+        }
+        .createStore {
+            position: relative;
+            top: auto;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                padding: 25px 5px 25px 0;
+                .circle {
+                    margin-top: 0;
+                    top: calc(100% - 65px);
+                }
+                .walletsCol {
+                    width: 100% !important;
+                    padding: 10px 0 10px 80px !important;
+                    .pic {
+                        left: 19px;
+                    }
+                    .val {
+                        max-width: 70%;
+                    }
+                    .num{
+                        max-width: 90%;
+                    }
+                    .copyMessage {
+                        top: calc(100% - 33px);
+                        left: 50%;
+                        margin-left: -70px;
+                      }
+                    &.walletName {
+                    }
+                    &.walletChange {
+                        &::before {
+                            left: 30px;
+                        }
+                    }
+                    &.walletNumber {
+                        width: 100% !important;
+                    }
+                    &.walletBalance {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+    .cabinetBanners {
+        .listBanners {
+            grid-template-columns: 1fr;
+        }
+        .btn {
+            padding: 12px 20px;
+        }
+        .listCheck {
+            .itemCheck {
+                & + .itemCheck {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .settingsPage {
+        .inputForm {
+            padding: 30px 15px;
+        }
+        .settingRight {
+            margin-top: 30px;
+            .inputForm {
+                .inputLine {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .filterBl {
+        .inputForm {
+            padding: 0 15px;
+            .btn,
+            .inputLine {
+                width: 100% !important;
+            }
+        }
+    }
+    .transactionPage {
+        padding: 15px 0 0;
+        .tableTransaction {
+            margin-top: 0;
+        }
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .shopBalance {
+                    padding: 25px 25px 25px 81px;
+                    .shopBalanceList {
+                        flex-wrap: wrap;
+                        .shopBalanceItem {
+                            width: 100%;
+                            & + .shopBalanceItem {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    .iconBl {
+                        left: 28px;
+                    }
+                }
+                & + .shopItem {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .createShopBlock {
+        padding: 30px 15px;
+    }
+    .btn {
+        &.btnChek {
+            .iconBl {
+                font-size: 17px;
+                left: 17px;
+                margin-top: -8px;
+            }
+        }
+    }
+    .docsDeveloper {
+        .listText {
+            .item {
+                padding: 30px 15px;
+                .txt {
+                    display: block;
+                    line-height: 20px;
+                }
+                .linkSite {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .shop {
+        .shopInfo {
+            .item {
+                width: 100%;
+            }
+        }
+        .shopState {
+            .item {
+                margin-bottom: 0;
+                width: 100%;
+                padding-left: 88px;
+                .iconBl {
+                    left: 25px;
+                }
+                & + .item {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .connectedCurrrencies {
+            .listCurrenceis {
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        padding: 31px 10px 20px 90px;
+                        .col {
+                            width: 100%;
+                            & + .col {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        li {
+            margin: 0 4px;
+            a {
+                &.prev {
+                    width: 22px;
+                    margin-right: 0;
+                    background-position: left;
+                }
+                &.next {
+                    width: 22px;
+                    margin-left: 0;
+                    background-position: right;
+                }
+            }
+        }
+    }
+    .textSimple {
+        ul {
+            li {
+                a {
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+                &::before {
+                    top: 10px;
+                }
+            }
+        }
+    }
+    .modalsScroll {
+        .closeModal {
+            top: 10px;
+            right: 10px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .modalsContent {
+        padding: 20px 15px 25px !important;
+        .capSite {
+            margin-bottom: 30px;
+            font-size: 20px;
+            max-width: 80%;
+            line-height: 19px;
+        }
+        .btn {
+            margin: 30px auto 0 !important;
+        }
+    }
+    .restoreModals {
+        .text {
+            margin-top: 30px;
+            font-size: 13px;
+            line-height: 20px;
+            .linkSite {
+                font-size: 13px;
+            }
+        }
+    }
+    .restoreModals {
+        .inputForm {
+            .btn {
+                top: 0;
+                margin-top: 0 !important;
+            }
+        }
+    }
+    .loginModals {
+        .inputForm {
+            .checkBlock {
+                label,
+                .linkSite {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .getCryptoModals {
+        .lineHandler {
+            .btn {
+                margin-top: 0 !important;
+            }
+        }
+    }
+    .sendCoinModal {
+        .inputForm {
+            .inputLine {
+                width: 100% !important;
+            }
+            .inputList {
+                margin-bottom: 0;
+                .inputLine {
+                    margin-bottom: 25px;
+                }
+                .znak {
+                    display: none;
+                }
+            }
+            .btnLine {
+                .btn {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+    }
+    .cabinetWallets {
+        .createStore {
+            top: 0;
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-top: 15px;
+        }
+    }
+    .ui-datepicker {
+        left: 0 !important;
+    }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width,user-scalable=no'>
+    <title>Создать магазин</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+</head>
+
+<body>
+    <section class="cabWrapper">
+        <div class="cabTop">
+            <div class="menuLineMobile">
+                <button class="menuBurger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="logo">
+                <a href="#"></a>
+                <img class="logoImage" src="img/logo.png" alt="">
+                <span class="logoText">payneks</span>
+            </div>
+            <div class="youBalance">
+                <div class="balance">
+                    <span class="iconBl icon-2">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                    </span>
+                    <span class="titBalance">Ваш баланс:</span>
+                    <span class="valBalance">$15959.00</span>
+                </div>
+                <div class="listBalance">
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val1.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val2.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val3.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val4.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val5.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val6.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url(img/pic_val7.png);"></div>
+                        <span class="val">0.1343438</span>
+                        <span class="cur">btc </span>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="cabMenu">
+            <div class="btnLine">
+                <a href="#" class="btn btnYellow btnBorder">Принять</a>
+                <a href="#" class="btn btnRed btnBorder">Отправить</a>
+            </div>
+            <div class="grettingsCab">
+                <div class="line">
+                    <span class="iconBl icon-4"><span class="path1"></span><span class="path2"></span></span>
+                    <span class="tit">Добро пожаловать,</span>
+                    <span class="name">Ivanovsky345</span>
+                </div>
+                <div class="line">
+                    <span class="iconBl icon-10">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                        <span class="path4"></span>
+                        <span class="path5"></span>
+                    </span>
+                    <span class="tit">Последний вход с IP:</span>
+                    <span class="txt">200.130.150.300</span>
+                </div>
+            </div>
+            <ul class="menuCab">
+                <li><a href="#" class="active"> <span class="iconBl icon-11"><span class="path1"></span><span
+                                class="path2"></span></span> Кабинет</a> </li>
+                <li><a href="#"> <span class="iconBl icon-6"><span class="path1"></span><span
+                                class="path2"></span></span></span> Кошельки</a> </li>
+                <li><a href="#"> <span class="iconBl icon-1"><span class="path1"></span><span
+                                class="path2"></span></span></span> Магазины</a> </li>
+                <li><a href="#"> <span class="iconBl icon-3"><span class="path1"></span><span
+                                class="path2"></span></span></span> Транзакции</a> </li>
+                <li><a href="#"> <span class="iconBl icon-5"><span class="path1"></span><span
+                                class="path2"></span></span></span> Настройки</a> </li>
+                <li><a href="#"> <span class="iconBl icon-8"><span class="path1"></span><span
+                                class="path2"></span></span></span> Поддержка</a> </li>
+                <li><a href="#"> <span class="iconBl icon-12"><span class="path1"></span><span
+                                class="path2"></span></span></span> Выход</a> </li>
+            </ul>
+        </div>
+        <div class="cabContent">
+            <a href="#" class="btn btnFullRed btnBack">К списку магазинов</a>
+            <h2 class="capSite">Создать магазин</h2>
+            <div class="cabCreateShop">
+                <form>
+                    <div class="createShopBlock bgWhite">
+                        <div class="inputForm">
+                            <div class="inputLine">
+                                <label for="">Название:</label>
+                                <input type="text">
+                            </div>
+                            <div class="inputLine">
+                                <label for="">Домен (без http:// или https://):</label>
+                                <input type="text">
+                            </div>
+                            <div class="inputLine">
+                                <label for="">URL обработчика:</label>
+                                <input type="text">
+                            </div>
+                            <div class="inputLine">
+                                <label for="">Email поддержки Вашего мерчанта:</label>
+                                <input type="text">
+                                <span class="impTxt"> (публичная информация)</span>
+                            </div>
+                            <div class="inputLine">
+                                <label for="">URL успешной оплаты:</label>
+                                <input type="text">
+                            </div>
+                            <div class="inputLine">
+                                <label for="">Секретный ключ:</label>
+                                <input type="text">
+                            </div>
+                            <div class="inputLine">
+                                <label for="">URL неуспешной оплаты:</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="textInfo">
+                            <p>Будем благодарны, если Вы установите виджет или логотип нашего сервиса на одну из страниц
+                                Вашего
+                                сайта в секции платежных систем или в раздел партнеры. </p>
+                            <p>Варианты логотипов доступны на странице </p>
+                            <a href="#" class="linkSite">Посмотреть логотипы и виджеты</a>
+                            <p>Так же проверьте наличие правильно указанного email для связи с вами.</p>
+                            <div class="checkBlock">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Мне нравится Ваш сервис и я поддержал Вас</label>
+                            </div>
+                        </div>
+                        <div class="currencyCreate">
+                            <span class="title">Выбор валют при создании:</span>
+                            <div class="currencylist">
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curUSD">
+                                    <label for="curUSD">USD</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curBTC">
+                                    <label for="curBTC">BTC</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curLTC">
+                                    <label for="curLTC">LTC</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curETH">
+                                    <label for="curETH">ETH</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curUSDT">
+                                    <label for="curUSDT">USDT</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curDASH">
+                                    <label for="curDASH">DASH</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curDOGE">
+                                    <label for="curDOGE">DOGE</label>
+                                </div>
+                                <div class="checkBlock">
+                                    <input type="checkbox" id="curXRP">
+                                    <label for="curXRP">XRP</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btnRed btnBorder btnChek"> <span class="iconBl icon-21"></span>
+                            Создать</button>
+                    </div>
+                </form>
+                <div class="docsDeveloper">
+                    <h3 class="capSite">Документация для разработчиков:</h3>
+                    <div class="listText">
+                        <div class="item">
+                            <span class="txt">Ознакомьтесь с документацией по подключению Payneks.</span>
+                            <a href="#" class="linkSite">Подробная документация</a>
+                        </div>
+                        <div class="item">
+                            <span class="txt">Скачайте и подключите PHP классы для приема платежей и выплат.</span>
+                            <a href="#" class="linkSite">SCI классы для приема платежей</a>
+                            <a href="#" class="linkSite">API классы для выплат</a>
+                        </div>
+                    </div>
+                    <div class="infoTextIp">IP-адрес сервера отправки уведомлений для SCI: 54.37.60.196,
+                        51.91.80.241,
+                        138.68.137.53. Актуальный список IP может быть получен в текстовом формате по URL:
+                        https://payneks.com/ips.txt или в JSON формате: https://payneks.com/ips.php</div>
+                    <div class="picture" style="background-image: url(img/picture11.png);"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script type='text/javascript' src='js/jquery-3.6.0.min.js'></script>
+<script type='text/javascript' src='js/jquery.selectric.min.js'></script>
+<script type='text/javascript' src='js/jquery.tabslet.min.js'></script>
+<script type='text/javascript' src='js/clipboard.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui.min.js'></script>
+<script type='text/javascript' src='js/slick.min.js'></script>
+<script type='text/javascript' src='js/ion.rangeSlider.min.js'></script>
+<script type='text/javascript' src='js/modal.js'></script>
+<script type='text/javascript' src='js/script.js'></script>
+
+</html>

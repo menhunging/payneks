@@ -1,0 +1,5476 @@
+.header {
+    position: relative;
+    padding: 29px 0 0;
+    background-color: $back1;
+    .headerWrap {
+        display: flex;
+        align-items: center;
+        .logo {
+            z-index: 10;
+            order: 1;
+        }
+        .langBlock {
+            order: 2;
+            margin-left: 49px;
+        }
+        .nav {
+            order: 3;
+            width: 100%;
+            max-width: 865px;
+            padding-left: 79px;
+            .navList {
+                margin: 0 auto;
+            }
+        }
+        .authBlock {
+            order: 4;
+        }
+    }
+    .grettingsBlock {}
+    .paymentMethodsCount {
+        width: 420px;
+        height: 220px;
+        position: absolute;
+        right: -213px;
+        bottom: -162px;
+        display: flex;
+        text-align: right;
+        z-index: 2;
+        overflow: hidden;
+        align-items: flex-start;
+        padding: 94px 0 0 74px;
+        .txt {
+            @include font(20px, 20px, $color1, 600, null);
+            width: 100px;
+            margin: 0;
+            display: block;
+            .num {
+                display: block;
+                @include font(90px, 65px, $color1, bold, null);
+                @include linear-gradient(top, $grad1, $grad2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        @include after {
+            border: dashed 1px $color2;
+            width: 420px;
+            height: 420px;
+            @include border-radius(50%);
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        @include before {
+            background-color: $colorWhite;
+            @include border-radius(50%);
+            width: 360px;
+            height: 360px;
+            z-index: -1;
+            top: 26px;
+            left: 30px;
+        }
+    }
+    @include before {
+        left: 50%;
+        bottom: -160px;
+        width: 2033px;
+        height: 185px;
+        background-image: url("../img/back_bot_gretting.png");
+        background-repeat: no-repeat;
+        margin-left: -1036px;
+    }
+    @include after {
+        right: 0;
+        top: 0;
+        background-color: $back1;
+        width: 30%;
+        z-index: -1;
+        height: calc(100% + 161px);
+    }
+}
+
+.innerPage {
+    .pageWrapper {
+        @include after {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 111px;
+            background-color: $back1;
+            z-index: -2;
+        }
+    }
+    .header {
+        background-color: transparent;
+        min-height: 270px;
+        &::before {
+            background-image: url("../img/back_page_head.png");
+            bottom: auto;
+            top: -221px;
+            margin-left: -1036px;
+            height: 694px;
+        }
+        &:after {
+            left: 0;
+            bottom: auto;
+            top: 0;
+            height: 100%;
+        }
+    }
+    .footer {
+        &:after {
+            width: 15%;
+        }
+        &:before {
+            margin-left: -1251px;
+        }
+    }
+}
+
+.langBlock {
+    .langList {
+        display: flex;
+        align-items: center;
+        .langItem {
+            &+.langItem {
+                margin-left: 9px;
+            }
+            .lang {
+                @include font(13px,
+                25px,
+                $colorBlack,
+                null,
+                null);
+                @include border-radius(50%);
+                @include transition(all 0.3s);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                background-color: $back2;
+                border: solid 1px $back2;
+                width: 36px;
+                height: 36px;
+                &.active {
+                    color: $color2;
+                    background-color: transparent;
+                    border: dashed 1px $color2;
+                }
+                &:hover {
+                    background-color: $color2;
+                    border-color: $color2;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    .navList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            position: relative;
+            &:hover {
+                .droplink {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: -21px;
+                        top: -15px;
+                        width: calc(100% + 36px);
+                        height: calc(100% + 42px);
+                        background-color: $colorWhite;
+                        display: none;
+                        z-index: -1;
+                        @include border-radius-top-right(20px);
+                        @include border-radius-top-left(20px);
+                    }
+                    color: $color2;
+                    &+.navSub {
+                        display: block;
+                    }
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+            &.mobile {
+                display: none;
+            }
+            a {
+                display: block;
+                width: 100%;
+                @include font(15px,
+                25px,
+                $color1,
+                400,
+                null);
+                z-index: 2;
+                position: relative;
+                &:hover {
+                    color: $color2;
+                }
+            }
+            &+li {
+                margin-left: 27px;
+            }
+        }
+    }
+    .navSub {
+        display: none;
+        background-color: $colorWhite;
+        @include border-radius(20px);
+        @include border-radius-top-left(0);
+        @include box-shadow($shadow1);
+        overflow: hidden;
+        position: absolute;
+        left: -21px;
+        top: calc(100% + 14px);
+        min-width: 312px;
+        z-index: 5;
+        &:hover {
+            display: block;
+        }
+        li {
+            a {
+                display: block;
+                width: 100%;
+                @include font(15px,
+                25px,
+                $color1,
+                null,
+                null);
+                padding: 12px 23px;
+                &:hover {
+                    color: $color2;
+                    background-color: $back1;
+                }
+            }
+            &+li {
+                border-top: dashed 1px $color3;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.authBlock {
+    display: flex;
+    align-items: center;
+    .signIn {
+        white-space: nowrap;
+    }
+    .signUp {
+        padding: 7px 30px;
+        margin-left: 27px;
+    }
+}
+
+.grettingsBlock {
+    padding: 150px 0 91px;
+    position: relative;
+    .grettingCap {
+        display: block;
+        @include font(70px,
+        80px,
+        $color1,
+        600,
+        null);
+        max-width: 45%;
+        &+.grettingText {
+            margin-top: 41px;
+        }
+    }
+    .grettingText {
+        max-width: 45%;
+        padding-right: 45px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 23px 44px;
+        margin-top: 90px;
+        left: 15px;
+    }
+}
+
+.grettingsPage {
+    padding: 44px 0 0;
+    position: relative;
+    .grettingCap {
+        display: block;
+        @include font(50px,
+        80px,
+        $color1,
+        600,
+        null);
+        max-width: 55%;
+    }
+    .menu {
+        display: flex;
+        margin-top: 25px;
+        position: relative;
+        li {
+            a {
+                @include font(15px,
+                30px,
+                $color1,
+                null,
+                null);
+                &:hover,
+                &.active {
+                    color: $color2;
+                }
+            }
+            &+li {
+                margin-left: 27px;
+            }
+        }
+    }
+}
+
+.stateLine {
+    padding: 109px 0 0;
+    position: relative;
+    .stateList {
+        display: flex;
+        max-width: calc(50% + 102px);
+        .item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-right: 50px;
+            .iconBl {
+                font-size: 45px;
+                &.icon-3 {
+                    font-size: 30px;
+                }
+            }
+            .name {
+                @include font(40px,
+                25px,
+                $color1,
+                600,
+                null);
+                margin-left: 14px;
+                white-space: nowrap;
+            }
+            .txt {
+                width: 100%;
+                margin-top: 6px;
+                @include font(17px,
+                27px,
+                $textColor1,
+                null,
+                0.025em);
+            }
+        }
+    }
+}
+
+.textBlockWrap {
+    position: relative;
+    z-index: 2;
+    padding: 113px 0;
+    &.textLeft {
+        .wrap {
+            flex-direction: row-reverse;
+        }
+    }
+    .wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .picture {
+            width: 50%;
+            height: 441px;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 18px;
+            left: -17px;
+            position: relative;
+        }
+        .textBlock {
+            width: calc(50% - 25px);
+            .capSite {
+                padding-right: 25px;
+                &+ul {
+                    margin-top: 47px;
+                }
+            }
+            ul {
+                li {
+                    @include font(17px,
+                    40px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                    position: relative;
+                    padding-left: 16px;
+                    &+li {}
+                    @include before {
+                        background-color: $color2;
+                        width: 6px;
+                        height: 6px;
+                        top: 14px;
+                        left: -3px;
+                        @include border-radius(50%);
+                    }
+                }
+            }
+            .btn {
+                padding: 23px 46px;
+                margin-top: 66px;
+                left: 10px;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.cryptoBlock {
+    background-color: $back3;
+    padding: 84px 0 90px;
+    .wrap {
+        .capSite {
+            display: block;
+            text-align: center;
+        }
+        .cryptoList {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            margin-top: 70px;
+            row-gap: 30px;
+            column-gap: 30px;
+            .cryptoItem {
+                .item {
+                    &+.item {
+                        margin-top: 29px;
+                    }
+                }
+            }
+            .item {
+                background-color: $colorWhite;
+                @include border-radius(20px);
+                @include box-shadow($shadow1);
+                padding: 9px 8px 9px 17px;
+                .valueLine {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    .value {
+                        @include font(17px,
+                        20px,
+                        $color1,
+                        null,
+                        null);
+                        .cur {
+                            font-size: 10px;
+                            color: $textColor2;
+                            margin-left: 7px;
+                        }
+                    }
+                    .pr {
+                        width: 100%;
+                        text-align: right;
+                        font-size: 10px;
+                        &.up {
+                            color: $color4;
+                        }
+                        &.down {
+                            color: $color2;
+                        }
+                    }
+                }
+                .pic {
+                    display: block;
+                    height: 40px;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .cryptoDesc {
+            width: 100%;
+            text-align: center;
+            max-width: 38%;
+            margin: 0 auto;
+            margin-top: 0px;
+            display: block;
+            margin-top: 83px;
+            @include font(17px,
+            30px,
+            $textColor1,
+            600,
+            0.02em);
+            .linkSite {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.howConnectBlock {
+    padding: 85px 0 50px;
+    .wrap {
+        .capSite {
+            text-align: center;
+        }
+        .connectList {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 97px;
+            .connectItem {
+                width: calc((100% / 4) - 48px);
+                text-align: center;
+                position: relative;
+                .picture {
+                    width: 100%;
+                    height: 161px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    &+.name {
+                        margin-top: 28px;
+                    }
+                }
+                .name {
+                    display: block;
+                    @include font(17px,
+                    25px,
+                    $color1,
+                    600,
+                    0.025em);
+                    min-height: 50px;
+                    &+.txt {
+                        margin-top: 28px;
+                    }
+                }
+                .txt {
+                    display: block;
+                    @include font(13px,
+                    20px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                }
+                @include before {
+                    background-image: url("../img/str1.png");
+                    width: 218px;
+                    height: 49px;
+                    left: calc(50% + 75px);
+                    top: 81px;
+                }
+                &:nth-child(2n) {
+                    &::before {
+                        top: -9px;
+                        left: calc(50% + 71px);
+                        background-image: url("../img/str2.png");
+                    }
+                }
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.whyBlock {
+    padding: 36px 0;
+    margin-bottom: -61px;
+    .capSite {
+        @include font(55px,
+        80px,
+        $color1,
+        600,
+        null);
+        text-align: center;
+    }
+}
+
+.whyTabs {
+    position: relative;
+    &.tabs {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        .listLinks {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: solid 1px $back4;
+            margin-top: 93px;
+            li {
+                width: auto;
+                padding: 0;
+                margin: 0;
+                border: 0;
+                background: transparent;
+                position: relative;
+                &.ui-tabs-active {
+                    a {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+                &:not(.ui-tabs-active) {
+                    a {
+                        .path1,
+                        .path2,
+                        .path3 {
+                            &::before {
+                                color: $back5;
+                            }
+                        }
+                    }
+                }
+                a {
+                    width: 100%;
+                    @include font(17px,
+                    27px,
+                    $color1,
+                    600,
+                    0.025em);
+                    padding: 4px 4px 15px 43px;
+                    .iconBl {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    @include before {
+                        left: 0;
+                        bottom: 0;
+                        background-color: $color2;
+                        width: 0;
+                        height: 3px;
+                    }
+                }
+                &+li {}
+            }
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        .tabsBody {
+            padding: 0;
+            min-height: 620px;
+        }
+    }
+    .textBlockWrap {
+        padding: 134px 0 0;
+        .wrap {
+            .picture {
+                top: -62px;
+                left: 5px;
+                height: 486px;
+            }
+            .textBlock {
+                .capSite {
+                    font-size: 30px;
+                    line-height: 40px;
+                    text-align: left;
+                    &+* {
+                        margin-top: 27px;
+                    }
+                }
+                .textToh {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    @include before {
+        left: 50%;
+        top: -159px;
+        background-image: url("../img/back_top_footer.png");
+        background-repeat: no-repeat;
+        width: 2033px;
+        height: 165px;
+        margin-left: -995px;
+    }
+    @include after {
+        left: 0;
+        top: -159px;
+        background-color: $back1;
+        width: 30%;
+        z-index: 0;
+        height: calc(100% + 165px);
+    }
+    .footerWrap {
+        padding: 0 0 35px;
+        position: relative;
+        background-color: $back1;
+        z-index: 2;
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+        .footerLeft {
+            margin-top: -92px;
+            max-width: 30%;
+            .logo {
+                .logoImage {
+                    width: 49px;
+                }
+                .logoText {
+                    font-size: 44px;
+                }
+            }
+            .footerInfo {
+                margin-top: 60px;
+                .link {
+                    display: table;
+                    @include font(30px,
+                    40px,
+                    $color1,
+                    null,
+                    null);
+                    &:hover {
+                        color: $color2;
+                    }
+                }
+                .timeWork {
+                    display: block;
+                    @include font(15px,
+                    18px,
+                    $textColor3,
+                    null,
+                    null);
+                    margin-top: 15px;
+                }
+                .linkMail {
+                    display: table;
+                    margin-top: 21px;
+                }
+                .btn {
+                    display: table;
+                    margin-top: 37px;
+                    padding: 8px 27px;
+                }
+            }
+        }
+        .footerRight {
+            max-width: 55%;
+            .footerMenu {
+                margin: -25px -13px;
+                .link {
+                    margin: 21px 18px;
+                    position: relative;
+                    display: inline-block;
+                    @include font(15px,
+                    18px,
+                    $color1,
+                    null,
+                    null);
+                    @include after {
+                        border-bottom: dashed 1px $color1;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 1px;
+                    }
+                    &:hover {
+                        &:after {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .copyRight {
+            width: 100%;
+            margin-top: 86px;
+            @include font(13px,
+            18px,
+            $textColor3,
+            null,
+            null);
+        }
+    }
+}
+
+.faqPage {
+    min-height: 700px;
+    padding: 103px 0 187px;
+    .faqBlock {
+        position: relative;
+    }
+    .faqTabs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .listLinks {
+            width: 25%;
+            padding: 8px 0;
+            li {
+                float: none;
+                &.ui-tabs-active {
+                    a {
+                        color: $color2;
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                a {
+                    float: none;
+                    display: table;
+                    padding: 0;
+                    @include font(20px,
+                    30px,
+                    $color1,
+                    null,
+                    0.03em);
+                    @include before {
+                        background-image: url("../img/back_toh.png");
+                        width: calc(100% + 30px);
+                        height: 10px;
+                        right: calc(100% + 21px);
+                        top: 50%;
+                        margin-top: -1px;
+                        opacity: 0;
+                    }
+                }
+                &+li {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .tabsBody {
+            width: calc(75% - 48px);
+        }
+    }
+}
+
+.searchBlock {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -89px;
+    max-width: 420px;
+    width: 100%;
+    label {
+        @include font(15px,
+        30px,
+        $color1,
+        null,
+        0.025em);
+        margin-right: 11px;
+    }
+    input {
+        background-color: $back3;
+        border: 0;
+        @include border-radius(20px);
+        @include font(13px,
+        30px,
+        $textColor1,
+        normal,
+        0em);
+        width: 100%;
+        height: 39px;
+        padding: 0 38px 0 20px;
+    }
+    .icon {
+        background-image: url("../img/iconsearch.png");
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        margin-top: -9px;
+        cursor: pointer;
+    }
+    @include before {
+        background-image: url("../img/back_search.png");
+        background-repeat: no-repeat;
+        width: 464px;
+        height: 323px;
+        top: -134px;
+        left: -81px;
+        z-index: -1;
+    }
+}
+
+.agreementsPage {
+    position: relative;
+    .agreementsTop {
+        padding: 104px 0 95px;
+    }
+    .agreementsText {
+        padding: 39px 0 240px;
+    }
+}
+
+.agreementsTop {
+    position: relative;
+    z-index: 2;
+    .textSimple {
+        max-width: 79%;
+        .capSite {
+            font-size: 20px;
+            line-height: 30px;
+            @include font(20px,
+            30px,
+            $color1,
+            600,
+            0.025em);
+            &+* {
+                margin-top: 36px;
+            }
+            &::before {
+                left: auto;
+                right: calc(100% + 23px);
+                top: 14px;
+            }
+        }
+    }
+}
+
+.agreementsText {
+    @include linear-gradient(top,
+    $back3,
+    $colorWhite);
+    position: relative;
+    @include before {
+        background-image: url("../img/back_top_text.png");
+        background-repeat: no-repeat;
+        left: 50%;
+        top: -159px;
+        width: 2502px;
+        height: 170px;
+        margin-left: -1155px;
+    }
+    .textSimple {
+        ul {
+            margin-top: 22px;
+            li {
+                font-size: 16px;
+            }
+            &+* {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.contactsPage {
+    padding: 0 0 262px;
+}
+
+.contactsInfo {
+    padding: 120px 0 129px;
+    position: relative;
+    z-index: 3;
+    .contactsList {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 100px;
+        .contactItem {
+            position: relative;
+            padding-left: 183px;
+            width: 35%;
+            row-gap: 200px;
+            .pic {
+                position: absolute;
+                left: -27px;
+                top: -44px;
+                width: 200px;
+                height: 200px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .tit {
+                @include font(30px,
+                50px,
+                $color1,
+                600,
+                null);
+                display: block;
+            }
+            .linkSite {
+                font-size: 21px;
+                line-height: 30px;
+                display: table;
+                margin-top: 8px;
+            }
+            &+.contactItem {
+                margin-left: 108px;
+            }
+        }
+    }
+}
+
+.blockCTA {
+    background-color: $back3;
+    position: relative;
+    @include after {
+        background-image: url("../img/back_top_text.png");
+        background-repeat: no-repeat;
+        left: 50%;
+        top: -159px;
+        width: 2502px;
+        height: 170px;
+        margin-left: -1155px;
+    }
+    .textBlockWrap {
+        padding: 130px 0 0px;
+        .wrap {
+            .picture {
+                top: -67px;
+            }
+            .textBlock {
+                .capSite {
+                    font-size: 50px;
+                    &+* {
+                        margin-top: 36px;
+                    }
+                }
+                b {
+                    font-size: 20px;
+                    display: block;
+                    color: $color1;
+                }
+                .textToh {
+                    a {
+                        color: $color2;
+                    }
+                }
+                .btn {
+                    padding: 23px 57px;
+                    margin-top: 73px;
+                    left: 15px;
+                }
+            }
+        }
+    }
+}
+
+.contactsForm {
+    padding: 95px 0 0;
+    margin-bottom: -161px;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .contactText {
+            position: relative;
+            top: -74px;
+            .capSite {}
+            .text {
+                display: block;
+                @include font(17px,
+                30px,
+                $textColor1,
+                null,
+                0.025em);
+                margin-top: 27px;
+            }
+            .linkSite {
+                font-size: 21px;
+                line-height: 30px;
+                margin-top: 15px;
+                display: table;
+            }
+        }
+        .inputForm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: calc(50% + 122px);
+            padding: 68px 90px 55px;
+            .inputLine {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: calc(50% - 24px);
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                    margin-bottom: 22px;
+                }
+            }
+            .btnLine {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                z-index: 2;
+                .btn {
+                    top: 23px;
+                    padding: 23px 59px;
+                    left: -20px;
+                    @include after {
+                        background-image: url("../img/str.png");
+                        width: 296px;
+                        height: 132px;
+                        right: calc(100% - 120px);
+                        top: 17px;
+                        pointer-events: none;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inputForm {
+    position: relative;
+    z-index: 2;
+    label {
+        display: block;
+        @include font(15px,
+        20px,
+        $colorBlack,
+        null,
+        0.025em);
+        padding-left: 4px;
+        position: relative;
+        .imp {
+            color: $color2;
+        }
+        .info {
+            position: absolute;
+            right: 0;
+            top: -5px;
+            background-image: url("../img/input_info.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    .inputLine {
+        margin-bottom: 27px;
+        position: relative;
+        .selectric {
+            background-color: $back3;
+            @include border-radius(20px);
+            border: 0;
+            height: 40px;
+            margin-top: 3px;
+            .label {
+                padding: 0 10px;
+                font-size: 13px;
+                font-family: $fontMain;
+            }
+            .button {
+                background-image: url("../img/arrow_selectric.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                &:after {
+                    display: none;
+                }
+            }
+            .iconArrow {
+                background-image: url("../img/arrow_selectric.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                right: 0;
+                top: 0;
+                width: 38px;
+                height: 38px;
+                position: absolute;
+            }
+        }
+        .iconArrow {
+            background-image: url("../img/arrow_selectric.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            right: 0;
+            bottom: 1px;
+            width: 38px;
+            height: 38px;
+            position: absolute;
+        }
+        .selectric-selectricPic {
+            .selectric {
+                .label {
+                    padding-left: 37px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    font-family: $fontMain;
+                }
+            }
+        }
+        input {
+            width: 100%;
+            height: 40px;
+            background-color: $back3;
+            @include border-radius(20px);
+            border: 0;
+            padding: 0 20px;
+            margin-top: 3px;
+            font-size: 13px;
+        }
+        textarea {
+            padding: 10px 20px;
+            width: 100%;
+            height: 103px;
+            background-color: $back3;
+            @include border-radius(20px);
+            border: 0;
+            margin-top: 3px;
+            font-size: 13px;
+        }
+        .impTxt {
+            position: absolute;
+            right: 3px;
+            top: 4px;
+            @include font(12px,
+            14px,
+            $textColor8,
+            null,
+            null);
+        }
+        .cur {
+            position: absolute;
+            right: 16px;
+            bottom: 11px;
+            @include font(14px,
+            18px,
+            $colorBlack,
+            bold,
+            null);
+            text-transform: uppercase;
+        }
+        .message {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            @include font(12px,
+            18px,
+            $color2,
+            null,
+            null);
+        }
+        &.error {
+            input {
+                border: dashed 1px $color2;
+            }
+        }
+    }
+}
+
+.loadFile {
+    .tit {
+        display: block;
+        @include font(15px,
+        20px,
+        $colorBlack,
+        null,
+        0.025em);
+        padding-left: 4px;
+    }
+    .txt {
+        @include font(13px,
+        20px,
+        $textColor4,
+        null,
+        null);
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        max-width: 105px;
+        white-space: nowrap;
+    }
+    label {
+        cursor: pointer;
+        display: block;
+        background-color: $back3;
+        @include border-radius(20px);
+        @include transition(all 0.3s);
+        width: 105px;
+        height: 105px;
+        margin: 11px 0 0px;
+        background-image: url("../img/plus.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover {
+            background-color: $color2;
+        }
+    }
+    input[type*="file"] {
+        display: none;
+    }
+    &.active {
+        label {
+            background-color: $color2;
+        }
+    }
+}
+
+.documentsPage {
+    padding: 103px 0 263px;
+    position: relative;
+    .documentsPageWrap {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .docLeft {
+        padding: 7px 0;
+    }
+    .docRight {
+        width: calc(100% - 398px);
+        .textSimple {
+            .capSite {
+                &+* {
+                    margin-top: 42px;
+                }
+            }
+            &>span {
+                &+* {
+                    margin-top: 43px;
+                }
+            }
+            p {
+                font-size: 17px;
+                line-height: 27px;
+                &+p {
+                    margin-top: 33px;
+                }
+                a {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .docMenu {
+        .docMenuList {
+            &>li {
+                a {
+                    position: relative;
+                    @include font(20px,
+                    30px,
+                    $color1,
+                    null,
+                    0.025em);
+                    &:hover {
+                        color: $color2;
+                    }
+                    &.active {
+                        color: $color2;
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                    @include before {
+                        background-image: url("../img/back_toh.png");
+                        width: calc(100% + 41px);
+                        height: 10px;
+                        right: calc(100% + 22px);
+                        top: 50%;
+                        margin-top: -1px;
+                        opacity: 0;
+                    }
+                }
+                &+li {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .docMenuListSub {
+            li {
+                a {
+                    @include font(17px,
+                    30px,
+                    $textColor5,
+                    null,
+                    0.025em);
+                    &:hover,
+                    &.active {
+                        color: $colorBlack;
+                    }
+                }
+            }
+        }
+    }
+    .searchBlock {
+        justify-content: flex-end;
+        input {
+            max-width: 358px;
+        }
+    }
+}
+
+.systemPage {
+    padding: 90px 0 71px;
+    position: relative;
+    .systemtext {
+        .textBlockWrap {
+            padding: 90px 0 18px;
+            .wrap {
+                .picture {
+                    top: -55px;
+                    left: -48px;
+                }
+                .textBlock {
+                    width: calc(50% - 37px);
+                    .btn {
+                        padding: 23px 59px;
+                        margin-top: 74px;
+                        left: 20px;
+                    }
+                }
+            }
+            .capSite {
+                font-size: 50px;
+                &+* {
+                    margin-top: 35px;
+                }
+            }
+            .textToh {
+                &:before {
+                    left: calc(100% + 23px);
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+
+.aboutInNumbers {
+    padding: 104px 0 0px;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        .left {
+            width: 30%;
+            .linkSite {
+                margin-top: 37px;
+                display: table;
+                font-size: 17px;
+            }
+        }
+        .right {
+            width: calc(60% - 17px);
+        }
+        .text {
+            margin-top: 41px;
+            @include font(17px,
+            30px,
+            $textColor1,
+            null,
+            null);
+            span {
+                @include font(20px,
+                30px,
+                $colorBlack,
+                null,
+                0.025em);
+            }
+            p {
+                &+p {
+                    margin-top: 31px;
+                }
+            }
+            &+.capSite {
+                margin-top: 93px;
+            }
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &.horizont {
+                .item {
+                    width: calc((100% / 2) - 10px);
+                    padding: 45px 52px 45px;
+                    .iconBl {
+                        top: 43px;
+                        right: 21px;
+                        font-size: 43px;
+                    }
+                    .num {
+                        font-size: 17px;
+                        max-width: 50%;
+                        line-height: 26px;
+                        font-weight: 600;
+                    }
+                    .txt {
+                        font-size: 13px;
+                        display: block;
+                        margin-top: -2px;
+                        line-height: 20px;
+                        max-width: 100%;
+                    }
+                    &:nth-child(2) {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &:after {
+                            right: -130px;
+                            left: auto;
+                        }
+                        &::before {
+                            display: block;
+                            top: -110px;
+                            left: auto;
+                            right: -110px;
+                        }
+                    }
+                    &:nth-child(4) {
+                        &:after {
+                            display: block;
+                            bottom: -110px;
+                            right: auto;
+                            left: -110px;
+                        }
+                        &::before {
+                            left: -130px;
+                            right: auto;
+                        }
+                    }
+                    &:nth-child(5) {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .item {
+                position: relative;
+                width: calc((100% / 3) - 10px);
+                margin-bottom: 20px;
+                background-color: $colorWhite;
+                @include box-shadow($shadow2);
+                @include border-radius(20px);
+                padding: 89px 5px 43px 57px;
+                overflow: hidden;
+                .iconBl {
+                    position: absolute;
+                    top: 15px;
+                    right: 31px;
+                    font-size: 35px;
+                }
+                .num {
+                    @include font(40px,
+                    50px,
+                    $color1,
+                    null,
+                    null);
+                    display: block;
+                }
+                .txt {
+                    @include font(17px,
+                    27px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                    display: block;
+                    max-width: 75%;
+                }
+                &:nth-child(1) {
+                    &:after {
+                        display: none;
+                    }
+                }
+                &:nth-child(2) {
+                    &:after {
+                        left: auto;
+                        right: -130px;
+                        bottom: -100px;
+                    }
+                    &::before {
+                        left: -160px;
+                        right: auto;
+                        bottom: -100px;
+                    }
+                }
+                &:nth-child(3) {
+                    &:after {
+                        left: -130px;
+                        bottom: -100px;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+                &:nth-child(4) {
+                    &:after {
+                        display: none;
+                    }
+                    &::before {
+                        bottom: auto;
+                        top: -130px;
+                        right: -130px;
+                    }
+                }
+                &:nth-child(5) {
+                    &:after {
+                        top: -110px;
+                        left: auto;
+                        right: -110px;
+                    }
+                    &::before {
+                        bottom: auto;
+                        top: -130px;
+                        left: -130px;
+                        right: auto;
+                    }
+                }
+                &:nth-child(6) {
+                    &:after {
+                        bottom: auto;
+                        top: -80px;
+                        left: -120px;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+                @include after {
+                    background-image: url("../img/blick1.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    left: -120px;
+                    bottom: -80px;
+                    width: 230px;
+                    height: 200px;
+                }
+                @include before {
+                    background-image: url("../img/blick2.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    right: -110px;
+                    bottom: -80px;
+                    width: 230px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+.joinBl {
+    position: relative;
+    z-index: 2;
+    padding: 28px 15px 29px 57px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    .text {
+        margin: 0;
+        max-width: 60%;
+        .capSite {
+            letter-spacing: 0.025em;
+            &+* {
+                margin-top: 5px;
+            }
+        }
+        span {
+            color: $color1;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            display: block;
+            font-size: 17px;
+        }
+    }
+    .btn {
+        padding: 23px 45px;
+        top: 25px;
+        @include after {
+            background-image: url("../img/str.png");
+            width: 296px;
+            height: 132px;
+            right: calc(100% - 120px);
+            top: 17px;
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
+}
+
+.partnersPage {
+    .textBlockWrap {
+        padding: 103px 0 80px;
+        .wrap {
+            .picture {
+                top: -25px;
+                left: -27px;
+            }
+            .textBlock {
+                width: calc(50% + 145px);
+                .capSite {
+                    font-size: 50px;
+                    &+* {
+                        margin-top: 45px;
+                    }
+                }
+                .textToh {
+                    span {
+                        display: block;
+                        &+span {
+                            margin-top: 31px;
+                        }
+                    }
+                    &::before {
+                        left: calc(100% + 23px);
+                        right: auto;
+                    }
+                }
+                .btn {}
+            }
+        }
+    }
+    .howConnectBlock {
+        padding: 95px 0 105px;
+        background-color: $back3;
+        position: relative;
+        @include before {
+            background-image: url("../img/back_top_text.png");
+            background-repeat: no-repeat;
+            left: 50%;
+            top: -159px;
+            width: 2502px;
+            height: 170px;
+            margin-left: -1155px;
+        }
+    }
+}
+
+.calcProfit {
+    padding: 114px 0 86px;
+    .calcProfitInner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .calcProfitLeft {
+        width: 45%;
+        .capSite {
+            line-height: 48px;
+            max-width: 50%;
+            &::before {
+                left: auto;
+                right: calc(100% + 15px);
+                width: calc(100% - 32px);
+            }
+        }
+    }
+    .calcProfitRight {
+        width: calc(55% - 8px);
+        .joinBl {
+            padding: 94px 15px 19px 0;
+            .text {
+                span {
+                    max-width: 88%;
+                }
+            }
+        }
+    }
+    .calcProfitList {
+        margin-top: 40px;
+        .item {
+            .tit {
+                @include font(17px,
+                45px,
+                $color1,
+                null,
+                null);
+                display: block;
+            }
+            .value {
+                display: block;
+                @include font(40px,
+                55px,
+                $color2,
+                600,
+                null);
+                .val {}
+                .cur {}
+            }
+            .calcPr {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 31px;
+                li {
+                    input {
+                        display: none;
+                        &:checked {
+                            &+label {
+                                color: $colorWhite;
+                                background-color: $color2;
+                                @include linear-gradient(left,
+                                $grad2,
+                                $grad1);
+                            }
+                        }
+                    }
+                    label {
+                        cursor: pointer;
+                        padding: 12px 31px;
+                        background-color: $colorWhite;
+                        @include font(20px,
+                        25px,
+                        $color1,
+                        bold,
+                        null);
+                        @include border-radius(25px);
+                        @include box-shadow($shadow2);
+                        max-width: 90px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &+li {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &+.item {
+                margin-top: 53px;
+            }
+        }
+    }
+    .calcProgWrap {
+        padding: 60px 59px 81px;
+        .line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .tit {
+                @include font(15px,
+                30px,
+                $colorBlack,
+                null,
+                0.025em);
+            }
+            .inputBlock {
+                position: relative;
+                width: calc(50% - 24px);
+                input {
+                    border: 0;
+                    height: 40px;
+                    width: 100%;
+                    padding: 0 55px 0 19px;
+                    background-color: $back3;
+                    @include border-radius(20px);
+                    @include font(15px,
+                    30px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                }
+                .cur {
+                    position: absolute;
+                    right: 18px;
+                    top: 50%;
+                    margin-top: -16px;
+                    @include font(15px,
+                    31px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                    text-transform: uppercase;
+                }
+            }
+            &+.line {
+                margin-top: 60px;
+            }
+        }
+    }
+    .progBlock {
+        margin-top: 38px;
+    }
+}
+
+.progBlock {
+    width: 100%;
+    @include border-radius(20px);
+    border: dashed 1px $colorWhite;
+    padding: 6px 5px;
+    &.progTur {
+        border-color: $color4;
+        .irs--flat {
+            .irs-bar {
+                background: $color4;
+            }
+        }
+        .irs-handle {
+            background: $color4;
+        }
+    }
+    &.progClient {
+        border-color: $color2;
+        .irs--flat {
+            .irs-bar {
+                background: $color2;
+            }
+        }
+        .irs-handle {
+            background: $color2;
+        }
+    }
+    .irs-single {
+        display: none;
+    }
+    .irs-handle {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        @include border-radius(50%);
+        top: -5px;
+        i {
+            display: none !important;
+        }
+    }
+    .irs-min {
+        left: -8px;
+    }
+    .irs-max {
+        right: -11px;
+    }
+    .irs-min,
+    .irs-max {
+        visibility: visible !important;
+        top: -22px;
+        background: transparent;
+        @include font(11px,
+        null,
+        $textColor4,
+        null,
+        null);
+    }
+    .irs {
+        font-family: $fontMain;
+    }
+    .irs--flat {
+        top: 0;
+        height: auto;
+        .irs-bar {
+            top: 0;
+            height: 8px;
+        }
+        .irs-line {
+            top: 0;
+            height: 8px;
+        }
+    }
+}
+
+.mershPage {
+    .textBlockWrap {
+        padding: 79px 0 10px;
+        &:not(.textLeft) {
+            .textBlock {
+                width: calc(50% - 39px);
+                .capSite {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+                .textToh {
+                    margin-top: 48px;
+                    max-width: 90%;
+                    &::before {
+                        right: auto;
+                        left: calc(100% + 21px);
+                        width: calc(100% + 22px);
+                        top: 21px;
+                    }
+                }
+                ul {
+                    padding-left: 8px;
+                    li {
+                        padding-left: 21px;
+                        line-height: 31px;
+                        &+li {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .picture {
+            top: -43px;
+            left: -32px;
+            height: 500px;
+        }
+    }
+    .mersInfoWrap {
+        padding: 0 0 117px;
+        position: relative;
+        z-index: 2;
+        .infoMersh {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                padding-left: 175px;
+                width: calc((100% / 3) - 85px);
+                position: relative;
+                .picture {
+                    width: 200px;
+                    height: 161px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    left: -30px;
+                    top: 23px;
+                    z-index: -1;
+                    &+.name {
+                        margin-top: 28px;
+                    }
+                }
+                .name {
+                    display: block;
+                    @include font(17px,
+                    27px,
+                    $color1,
+                    600,
+                    0.025em);
+                    min-height: 50px;
+                    &+.txt {
+                        margin-top: -2px;
+                    }
+                }
+                .txt {
+                    display: block;
+                    @include font(13px,
+                    20px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                }
+                &+li {
+                    margin-left: 67px;
+                }
+            }
+        }
+    }
+    .blockCTA {
+        .wrap {
+            .picture {
+                top: -37px;
+                left: -57px;
+            }
+        }
+        .textBlockWrap {
+            padding: 101px 0 0px;
+            .textBlock {
+                .capSite {
+                    line-height: 58px;
+                    &+* {
+                        margin-top: 27px;
+                    }
+                }
+                .btn {
+                    padding: 23px 40px;
+                }
+            }
+        }
+        &:after {
+            margin-left: -975px;
+        }
+        &+.textBlockWrap {
+            margin-top: 41px;
+        }
+    }
+    .aboutInNumbers {
+        padding: 93px 0 70px;
+        .wrap {
+            .left {
+                width: 25%;
+            }
+            .text {
+                span {
+                    font-size: 17px;
+                    max-width: 80%;
+                }
+            }
+        }
+        .joinBl {
+            padding-top: 49px;
+            .btn {
+                top: 21px;
+            }
+        }
+    }
+}
+
+.tarifPage {
+    .textBlockWrap {
+        padding: 79px 0 35px;
+        &:not(.textLeft) {
+            .textBlock {
+                width: calc(50% - 39px);
+                .capSite {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+                .textToh {
+                    margin-top: 48px;
+                    max-width: 90%;
+                    &::before {
+                        right: auto;
+                        left: calc(100% + 21px);
+                        width: calc(100% + 22px);
+                        top: 21px;
+                    }
+                }
+                ul {
+                    padding-left: 8px;
+                    li {
+                        padding-left: 21px;
+                        line-height: 31px;
+                        &+li {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .picture {
+            top: -43px;
+            left: -32px;
+            height: 500px;
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            padding: 100px 0 5px;
+            .wrap {
+                .capSite {
+                    line-height: 55px;
+                }
+                .textToh {
+                    .linkSite {
+                        font-size: 17px;
+                    }
+                }
+                .picture {
+                    top: -32px;
+                    left: -52px;
+                }
+            }
+        }
+    }
+}
+
+.tarifsBlock {
+    padding: 110px 0 77px;
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        .capSite {
+            font-size: 55px;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        .tarifsTableWrap {
+            width: 100%;
+            margin-top: 68px;
+            .tarifsTable {
+                width: 100%;
+            }
+        }
+        .joinBl {
+            margin-top: 45px;
+            max-width: 59%;
+            width: 100%;
+            .capSite {
+                font-size: 30px;
+                text-align: left;
+            }
+            .text {
+                span {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}
+
+.tarifsTable {
+    background-color: $back6;
+    @include border-radius(20px);
+    @include box-shadow($shadow2);
+    .tarifsHead {
+        @include font(13px,
+        24px,
+        $textColor6,
+        null,
+        null);
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 0;
+    }
+    .tarifsBody {
+        .tarifLine {
+            background-color: $colorWhite;
+            border-top: dashed 1px $color3;
+            .tarifLineUp {
+                position: relative;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &.open {
+                    &::before {
+                        @include transform(rotate(#{-180}deg));
+                    }
+                }
+                @include before {
+                    right: 16px;
+                    top: 50%;
+                    background-image: url("../img/arrow_red.png");
+                    width: 13px;
+                    height: 7px;
+                    margin-top: -4px;
+                }
+                .picture {
+                    height: 50px;
+                    background-position: 22px center;
+                    background-repeat: no-repeat;
+                }
+                .tiker {
+                    @include font(15px,
+                    20px,
+                    $color1,
+                    600,
+                    null);
+                    text-transform: uppercase;
+                }
+                .val {
+                    @include font(13px,
+                    20px,
+                    $color4V1,
+                    null,
+                    null);
+                }
+                .txt {
+                    @include font(13px,
+                    20px,
+                    $color2,
+                    null,
+                    null);
+                    text-transform: uppercase;
+                }
+            }
+            .tarifLineDown {
+                display: none;
+                padding: 0 23px 13px;
+                .cap {
+                    @include font(15px,
+                    20px,
+                    $color1,
+                    600,
+                    null);
+                    padding: 3px 0 14px;
+                    display: block;
+                }
+                ul {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        .tit {
+                            width: calc(55% + 2px);
+                            @include font(13px,
+                            24px,
+                            $textColor6,
+                            null,
+                            null);
+                        }
+                        .val {
+                            width: calc(15% + 2px);
+                            @include font(13px,
+                            24px,
+                            $color1,
+                            null,
+                            null);
+                            width: 29%;
+                            &+.val {
+                                width: 16%;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2n) {
+                background-color: $back6;
+            }
+        }
+    }
+    .td {
+        width: calc(100% / 4);
+        &:nth-child(1) {
+            width: 26%;
+            padding: 0 23px;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:nth-child(3) {
+            width: 26%;
+        }
+        &:nth-child(4) {
+            width: 17%;
+        }
+    }
+}
+
+.developersPage {
+    .textBlockWrap {
+        &:not(.textLeft) {
+            .wrap {
+                .picture {
+                    height: 500px;
+                    top: -6px;
+                    left: -61px;
+                }
+                .textBlock {
+                    width: calc(50% - 38px);
+                    .capSite {
+                        font-size: 50px;
+                        line-height: 57px;
+                    }
+                    .textToh {
+                        margin-top: 50px;
+                        &::before {
+                            display: none;
+                        }
+                        .textRed {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .apiLine {
+        padding: 17px 0 145px;
+        .wrap {}
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 0 -15px;
+            .item {
+                max-width: 458px;
+                padding: 4px 60px 54px;
+                min-height: 261px;
+                background-color: $colorWhite;
+                @include border-radius(20px);
+                @include box-shadow($shadow2);
+                margin: 0 15px;
+                .name {
+                    @include font(30px,
+                    50px,
+                    $color1,
+                    null,
+                    null);
+                }
+                .txt {
+                    display: block;
+                    @include font(17px,
+                    30px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                    margin-top: 10px;
+                    &+* {
+                        margin-top: 15px;
+                    }
+                }
+                .linkSite {
+                    display: table;
+                    font-size: 18px;
+                    margin-top: 34px;
+                    &+.linkSite {
+                        margin-top: 9px;
+                    }
+                }
+            }
+        }
+    }
+    .fastStartBlock {
+        padding: 119px 0 268px;
+        @include linear-gradient(top,
+        $back3,
+        $colorWhite);
+        position: relative;
+        @include before {
+            background-image: url("../img/back_top_text.png");
+            background-repeat: no-repeat;
+            left: 50%;
+            top: -159px;
+            width: 2502px;
+            height: 170px;
+            margin-left: -987px;
+        }
+        .wrap {}
+        .fastStartTop {
+            position: relative;
+            .capSite {
+                font-size: 50px;
+                max-width: 52%;
+                line-height: 69px;
+            }
+            .picture {
+                width: 50%;
+                height: 600px;
+                background-position: center;
+                background-repeat: no-repeat;
+                top: -224px;
+                right: -86px;
+                position: absolute;
+            }
+        }
+        .fastStartList {
+            padding: 90px 0 0;
+            .item {
+                .capSite {
+                    @include font(30px,
+                    40px,
+                    $color1,
+                    null,
+                    null);
+                }
+                .note {
+                    display: block;
+                    text-transform: uppercase;
+                    color: $color2;
+                    font-weight: bold;
+                    margin-top: 31px;
+                    letter-spacing: 0.06em;
+                }
+                .txt {
+                    display: block;
+                    @include font(17px,
+                    30px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                }
+                .btn {
+                    padding: 23px 41px;
+                    margin-top: 59px;
+                    left: 15px;
+                }
+                &+.item {
+                    margin-top: 102px;
+                }
+            }
+        }
+        .codeBlock {
+            display: none;
+            background-color: $colorWhite;
+            overflow: hidden;
+            @include border-radius(20px);
+            @include box-shadow($shadow2);
+            margin-top: 42px;
+            padding: 8px 6px 24px;
+            img {}
+        }
+    }
+}
+
+.cabWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cabTop {
+    width: 100%;
+    padding: 0 80px 0 30px;
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        .logoText {
+            font-size: 34px;
+            padding-left: 13px;
+        }
+    }
+}
+
+.cabMenu {
+    background-color: $back1;
+    @include border-radius-top-right(40px);
+    @include border-radius-bottom-right(40px);
+    width: 15%;
+    max-width: 282px;
+    .btnLine {
+        padding: 31px 18px 31px 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .btn {
+            padding: 7px 0;
+            font-size: 15px;
+            max-width: 120px;
+            width: 100%;
+            text-align: center;
+            &::before {
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+    }
+    .grettingsCab {
+        .line {
+            padding: 28px 15px 27px 89px;
+            position: relative;
+            border-top: dashed 1px $textColor5;
+            background-color: $back7;
+            .iconBl {
+                position: absolute;
+                left: 25px;
+                top: 33px;
+                font-size: 35px;
+            }
+            .tit {
+                @include font(13px,
+                20px,
+                $color1,
+                null,
+                null);
+                display: block;
+            }
+            .name {
+                @include font(15px,
+                20px,
+                $color2,
+                null,
+                null);
+                display: block;
+                margin-top: 4px;
+            }
+            .txt {
+                @include font(15px,
+                20px,
+                $color1,
+                null,
+                null);
+                display: block;
+                margin-top: 4px;
+            }
+        }
+    }
+    .menuCab {
+        li {
+            border-top: dashed 1px $textColor5;
+            a {
+                position: relative;
+                padding: 36px 15px 35px 89px;
+                display: block;
+                letter-spacing: 0.025em;
+                .iconBl {
+                    position: absolute;
+                    left: 25px;
+                    top: 33px;
+                    font-size: 35px;
+                }
+                &:hover,
+                &.active {
+                    color: $color2;
+                }
+            }
+            &:last-child {
+                border-bottom: dashed 1px $textColor5;
+            }
+        }
+    }
+}
+
+.cabContent {
+    position: relative;
+    padding: 59px 76px;
+    width: 85%;
+    .btnBack {
+        position: absolute;
+        right: 72px;
+        top: 62px;
+    }
+}
+
+.youBalance {
+    width: calc(100% - 240px);
+    background-color: $colorWhite;
+    @include border-radius-bottom-right(20px);
+    @include border-radius-bottom-left(20px);
+    @include box-shadow($shadow2);
+    padding: 27px 75px 28px 154px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .balance {
+        position: relative;
+        max-width: 300px;
+        margin-right: 25px;
+        .iconBl {
+            position: absolute;
+            left: -64px;
+            top: 50%;
+            font-size: 45px;
+            margin-top: -25px;
+        }
+        .titBalance {
+            @include font(13px,
+            15px,
+            $textColor6,
+            null,
+            null);
+            display: block;
+            white-space: nowrap;
+        }
+        .valBalance {
+            @include font(30px,
+            30px,
+            $color1,
+            600,
+            null);
+            display: block;
+        }
+    }
+    .listBalance {
+        width: calc(85% - 2px);
+        .slick-list {
+            margin: 0 -9px;
+        }
+        .item {
+            background-color: $back3;
+            @include border-radius(20px);
+            position: relative;
+            padding: 7px 0 7px 50px;
+            margin: 0 9px;
+            .pic {
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                margin-top: -19px;
+                width: 38px;
+                height: 38px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .val {
+                display: block;
+                @include font(13px,
+                16px,
+                $color1,
+                bold,
+                null);
+                white-space: normal;
+            }
+            .cur {
+                display: block;
+                text-transform: uppercase;
+                @include font(11px,
+                16px,
+                $color1,
+                null,
+                null);
+            }
+        }
+        .slick-prev {
+            color: transparent;
+            background-image: url("../img/arrow_left.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -5px;
+        }
+        .slick-next {
+            color: transparent;
+            background-image: url("../img/arrow_right.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -5px;
+        }
+    }
+    .circle {
+        display: none;
+    }
+}
+
+.hideZeroBalance {
+    position: absolute;
+    right: 72px;
+    top: 73px;
+    z-index: 5;
+    label {
+        position: relative;
+        padding-left: 45px;
+        cursor: pointer;
+        display: block;
+        @include font(15px,
+        17px,
+        $textColor1,
+        null,
+        null);
+        @include before {
+            background-color: $back3;
+            @include border-radius(10px);
+            width: 35px;
+            height: 35px;
+            left: -7px;
+            top: -7px;
+        }
+        @include after {
+            background-image: url("../img/arrow_chek.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            left: -6px;
+            top: -6px;
+            opacity: 0;
+        }
+    }
+    input {
+        display: none;
+        &:checked {
+            &+label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.cabinetPage {
+    .tableCryptoBalance {
+        width: 100%;
+        padding: 51px 0 0;
+        .cabTable {
+            .cabTbody,
+            .cabThead {
+                .cabTd {
+                    &:nth-child(1) {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .tableCryptoHistory {
+        padding: 75px 0 0;
+        .cabTable {
+            margin-top: 50px;
+            .cabTbody,
+            .cabThead {
+                .cabTd {
+                    &:nth-child(1) {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        .copyMessage {
+            max-width: 50%;
+        }
+    }
+    .tableStoreHistory {
+        padding: 76px 0 0;
+        .cabTable {
+            margin-top: 28px;
+            background: transparent;
+            min-height: 90px;
+            .cabTbody,
+            .cabThead {
+                .cabTd {
+                    &:nth-child(1) {
+                        padding-left: 13px;
+                    }
+                }
+            }
+            .cabThead {
+                .cabTd {
+                    height: 71px;
+                }
+            }
+        }
+    }
+}
+
+.cabTable {
+    position: relative;
+    width: 100%;
+    display: table;
+    background-color: $back8;
+    @include border-radius(20px);
+    @include box-shadow($shadow2);
+    overflow: hidden;
+    .cabThead {
+        width: 100%;
+        display: table-row-group;
+        .cabTr {
+            width: 100%;
+            display: table-row;
+            .cabTd {
+                padding: 0 5px;
+                height: 50px;
+                display: table-cell;
+                vertical-align: middle;
+                @include font(13px,
+                15px,
+                $textColor6,
+                null,
+                null);
+            }
+        }
+    }
+    .cabTbody {
+        width: 100%;
+        display: table-row-group;
+        .cabTr {
+            width: 100%;
+            display: table-row;
+            .cabTd {
+                padding: 7px 5px 6px;
+                border-top: dashed 1px $textColor6;
+                position: relative;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            &:nth-child(2n-1) {
+                background-color: $colorWhite;
+            }
+        }
+    }
+    .empty{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left:0;
+        bottom: 10px;        
+    }
+    .cryptoCoin {
+        position: relative;
+        padding-left: 43px;
+        .icon {
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            margin-top: -16px;
+            width: 33px;
+            height: 33px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .name {
+            @include font(15px,
+            15px,
+            $color1,
+            bold,
+            null);
+        }
+    }
+    .txt {
+        @include font(13px,
+        15px,
+        $color1,
+        null,
+        null);
+    }
+    .num {
+        @include font(13px,
+        15px,
+        $color1,
+        null,
+        null);
+        display: block;
+        &+.copyNum {
+            margin-top: 6px;
+        }
+    }
+    .copyNum {
+        @include font(13px,
+        15px,
+        $color2,
+        null,
+        null);
+        &+.num {
+            margin-top: 6px;
+        }
+    }
+    .value {
+        @include font(15px,
+        17px,
+        $color1,
+        600,
+        null);
+        .cur {}
+    }
+    .changeBalance {
+        position: relative;
+        padding-left: 30px;
+        &.up {
+            .pr {
+                color: $color4;
+            }
+            &::before {
+                content: "\e91c";
+                color: $color4;
+            }
+        }
+        &.down {
+            .pr {
+                color: $color2;
+            }
+            &::before {
+                content: "\e91d";
+                color: $color2;
+            }
+        }
+        .val {
+            display: block;
+            @include font(15px,
+            15px,
+            $color1,
+            600,
+            null);
+        }
+        .pr {
+            display: block;
+            @include font(13px,
+            13px,
+            $color1,
+            600,
+            null);
+            margin-top: 5px;
+        }
+        @include before {
+            left: -2px;
+            top: 3px;
+            font-size: 24px;
+            font-family: "icomoon" !important;
+        }
+    }
+    .well {
+        @include font(15px,
+        15px,
+        $color1,
+        bold,
+        null);
+    }
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4px;
+        .btn {
+            font-size: 13px;
+            padding: 4px 5px;
+            width: calc(50% - 7px);
+            text-align: center;
+        }
+    }
+    .textOper {
+        @include font(15px,
+        15px,
+        $color2,
+        null,
+        null);
+        &.in {
+            color: $color4;
+        }
+        &.out {
+            color: $color2;
+        }
+    }
+    .summaBalance {
+        &.up {
+            .pr {
+                color: $color4;
+            }
+        }
+        &.down {
+            .pr {
+                color: $color2;
+            }
+        }
+        .pr {
+            display: block;
+            @include font(15px,
+            15px,
+            $color1,
+            600,
+            null);
+        }
+        .val {
+            margin-top: 3px;
+            display: block;
+            @include font(15px,
+            15px,
+            $color1,
+            600,
+            null);
+        }
+    }
+    .summaBlock {
+        .txt {
+            display: block;
+            font-weight: 600;
+            &.btc {
+                color: $color2;
+            }
+            &.usd {
+                color: $color4;
+            }
+        }
+    }
+    .walletList {
+        .txt {
+            position: relative;
+            font-size: 11px;
+            line-height: 11px;
+            display: block;
+            letter-spacing: -0.02em;
+            overflow: visible !important;
+            @include before {
+                left: -11px;
+                top: 4px;
+                background-image: url("../img/back_next_wallet.png");
+                background-repeat: no-repeat;
+                width: 8px;
+                height: 17px;
+            }
+            &+.txt {
+                margin-top: 3px;
+                &::before {
+                    top: 9px;
+                }
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .heshList {
+        .item {
+            display: flex;
+            align-items: center;
+            .tit {
+                width: 55px;
+                @include font(11px,
+                11px,
+                $textColor6,
+                null,
+                null);
+            }
+            .txt {
+                width: 80%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-left: 4px;
+                font-size: 11px;
+            }
+            &+.item {
+                margin-top: 5px;
+            }
+        }
+    }
+    .status {
+        font-size: 13px;
+        &.good {
+            color: $color5;
+        }
+        &.wait {
+            color: $color4;
+        }
+        &.fail {
+            color: $color2;
+        }
+    }
+    .storeInfo {
+        .name {
+            font-size: 13px;
+            display: block;
+            color: $color2;
+        }
+        .txt {
+            display: block;
+        }
+    }
+}
+
+.yourStores {
+    position: relative;
+    padding: 72px 0 0;
+    .capSite {}
+    .yourStoresList {
+        margin-top: 50px;
+        .item {
+            background-color: $colorWhite;
+            @include border-radius(20px);
+            @include box-shadow($shadow2);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 25px 5px 25px 34px;
+            .col {
+                position: relative;
+                padding-left: 66px;
+                width: 20%;
+                &:first-child {
+                    padding-left: 0;
+                    width: calc(15% - 114px);
+                }
+                &:last-child {
+                    width: 15%;
+                }
+                .iconBl {
+                    position: absolute;
+                    left: 0;
+                    top: -3px;
+                    font-size: 40px;
+                    color: $textColor7;
+                     ::before {
+                        color: $textColor7;
+                    }
+                }
+                .tit {
+                    @include font(13px,
+                    13px,
+                    $textColor6,
+                    null,
+                    null);
+                    display: block;
+                }
+                .num {
+                    font-size: 13px;
+                    display: block;
+                    margin-top: 6px;
+                }
+                .nameShop {
+                    font-size: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 80%;
+                }
+                .date {
+                    font-size: 13px;
+                }
+                .site {
+                    font-size: 13px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 80%;
+                }
+                .currencies {
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    null,
+                    null);
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 3px -6px 0;
+                    span {
+                        margin: 5px 6px;
+                    }
+                }
+                .val {
+                    @include font(24px,
+                    24px,
+                    $color1,
+                    600,
+                    null);
+                }
+            }
+            &+.item {
+                margin-top: 48px;
+            }
+        }
+    }
+    .notStores {
+        padding: 40px 0 0;
+        .txt {
+            display: block;
+            @include font(17px,
+            18px,
+            $color1,
+            null,
+            null);
+        }
+    }
+}
+
+.createStore {
+    position: absolute;
+    right: -6px;
+    top: 78px;
+    padding: 10px 37px 10px 25px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        .plus {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .plus {
+        position: relative;
+        width: 21px;
+        height: 21px;
+        margin-right: 15px;
+        @include before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("../img/plus2.png");
+        }
+        @include after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("../img/plus2white.png");
+        }
+    }
+    &.notStore {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 47px;
+        padding: 34px 0 38px;
+        font-size: 20px;
+        @include border-radius(25px);
+    }
+}
+
+.cabinetWallets {
+    position: relative;
+    .createStore {
+        top: -44px;
+    }
+}
+
+.walletsList {
+    padding: 38px 0;
+    .walletsItem {
+        @include border-radius(20px);
+        background-color: $back3;
+        .walletsInfo {
+            padding: 25px 165px 20px 0;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            background-color: $colorWhite;
+            @include border-radius(20px);
+            @include box-shadow($shadow2);
+            justify-content: space-between;
+            .walletsCol {
+                position: relative;
+                padding: 0 5px;
+                &.coinName {
+                    padding-left: 94px;
+                    width: 300px;
+                    z-index: 5;
+                    &:hover {
+                        .visKey {
+                            pointer-events: inherit;
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.walletName {
+                    width: calc(15% - 10px);
+                }
+                &.walletNumber {
+                    max-width: calc(25% + 5px);
+                    width: 100%;
+                }
+                &.walletBalance {
+                    width: 120px;
+                }
+                &.walletChange {
+                    top: -7px;
+                    position: relative;
+                    width: 230px;
+                    padding: 0 10px 0 25px;
+                    .tit {
+                        display: inline;
+                    }
+                    &.up {
+                        .val,
+                        .pr {
+                            color: $color4;
+                        }
+                        &::before {
+                            content: "\e91c";
+                            color: $color4;
+                        }
+                    }
+                    &.down {
+                        .val,
+                        .pr {
+                            color: $color2;
+                        }
+                        &::before {
+                            content: "\e91d";
+                            color: $color2;
+                        }
+                    }
+                    .val {
+                        display: block;
+                        @include font(15px,
+                        15px,
+                        $color1,
+                        600,
+                        null);
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .pr {
+                        @include font(13px,
+                        13px,
+                        $color1,
+                        600,
+                        null);
+                        margin-top: 5px;
+                    }
+                    @include before {
+                        left: -20px;
+                        top: 32px;
+                        font-size: 24px;
+                        font-family: "icomoon" !important;
+                    }
+                }
+                .pic {
+                    position: absolute;
+                    left: 26px;
+                    top: 50%;
+                    margin-top: -22px;
+                    width: 44px;
+                    height: 45px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .tit {
+                    display: block;
+                    margin-bottom: 4px;
+                    @include font(13px,
+                    15px,
+                    $textColor6,
+                    null,
+                    null);
+                }
+                .name {
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    600,
+                    null);
+                    display: block;
+                    margin-top: 14px;
+                }
+                .num {
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    600,
+                    null);
+                    display: block;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                .balanceVal {
+                    display: block;
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    600,
+                    null);
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &+.balanceVal {
+                        margin-top: 5px;
+                    }
+                }
+                .val {
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    600,
+                    null);
+                    &+.val {
+                        margin-top: 5px;
+                    }
+                }
+                .changeNameWallet {
+                    left: -14px;
+                    margin-top: 3px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    height: 40px;
+                    &.change {
+                        background-color: $back3;
+                        @include border-radius(20px);
+                        input {}
+                        .iconBl {
+                            &.change {
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+                            &.save {
+                                opacity: 1;
+                                pointer-events: inherit;
+                            }
+                        }
+                    }
+                    input {
+                        background: transparent;
+                        border: 0;
+                        @include font(15px,
+                        15px,
+                        $color1,
+                        600,
+                        null);
+                        max-width: 175px;
+                        padding: 0 35px 0 15px;
+                    }
+                    .iconBl {
+                        background-color: $back3;
+                        @include border-radius(50%);
+                        width: 40px;
+                        height: 40px;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 40px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        @include transition(all 0.3s);
+                        &.change {
+                            display: block;
+                            z-index: 5;
+                            opacity: 1;
+                        }
+                        &.save {
+                            display: block;
+                            opacity: 0;
+                            z-index: 5;
+                            pointer-events: none;
+                        }
+                    }
+                }
+                .visKey {
+                    position: absolute;
+                    top: 100%;
+                    padding-top: 20px;
+                    left: 89px;
+                    pointer-events: none;
+                    opacity: 0;
+                    @include transition(opacity .3s);
+                    z-index: 5;
+                    &:hover {
+                        pointer-events: inherit;
+                        opacity: 1;
+                    }
+                    .linkSite {
+                        background-color: $colorWhite;
+                        @include border-radius(5px);
+                        @include box-shadow($shadow2);
+                        white-space: nowrap;
+                        padding: 6px 14px;
+                        font-size: 13px;
+                        letter-spacing: 0.01em;
+                        display: table;
+                    }
+                }
+            }
+            .circle {
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                background-color: $back3;
+                @include border-radius(50%);
+                margin-top: -24px;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                z-index: 5;
+                text-align: center;
+                @include transition(all 0.3s);
+                &.open {
+                    background-color: $color4;
+                    @include transform(rotate(#{-180}deg));
+                    &::before {
+                        color: $colorWhite;
+                    }
+                }
+                &::before {
+                    content: "\e928";
+                    font-family: "icomoon" !important;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-top: -20px;
+                    @include transition(all 0.3s);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    font-size: 12px;
+                    line-height: 50px;
+                }
+                &:hover {
+                    background-color: $color4;
+                    color: $colorWhite;
+                }
+            }
+        }
+        .walletsText {
+            display: none;
+            @include border-radius-bottom-right(20px);
+            @include border-radius-bottom-left(20px);
+            @include font(13px,
+            18px,
+            $textColor1,
+            null,
+            0.025em);
+            padding: 29px 35px 21px;
+            .btnsLine {
+                margin: 18px -10px 0;
+                .btn {
+                    margin: 5px 5px;
+                    padding: 4px 12px;
+                    font-size: 13px;
+                    background-color: $colorWhite;
+                    &.btnFullYellow {
+                        &:hover {
+                            background-color: $color4;
+                            color: $colorWhite;
+                        }
+                    }
+                    &.btnFullRed {
+                        &:hover {
+                            background-color: $color2;
+                            color: $colorWhite;
+                        }
+                    }
+                    &.btnFullBlack {
+                        &:hover {
+                            background-color: $colorBlack;
+                            color: $colorWhite;
+                        }
+                    }
+                    &+.btn {}
+                }
+            }
+        }
+        &+.walletsItem {
+            margin-top: 22px;
+        }
+    }
+}
+
+.cabinetBanners {
+    margin-top: 77px;
+    padding: 65px 92px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .listBanners {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 68px;
+        margin-bottom: 71px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 53px 50px;
+        .itemBanner {
+            @include border-radius(10px);
+            overflow: hidden;
+            height: 115px;
+            @include box-shadow($shadow2);
+            padding: 11px 19px;
+            &.bannerVers1 {
+                background-color: $back1;
+            }
+            &.bannerVers2 {
+                background-color: $color2;
+                .name {
+                    color: $colorWhite;
+                }
+                .logoText {
+                    color: $colorWhite;
+                    .desc {
+                        color: $color4;
+                    }
+                }
+            }
+            &.bannerVers3 {
+                background-color: $color1;
+                .name {
+                    color: $colorWhite;
+                }
+                .logoText {
+                    color: $colorWhite;
+                    .desc {
+                        color: $colorWhite;
+                    }
+                }
+            }
+            &.bannerVers4 {
+                background-color: $colorWhite;
+            }
+            .name {
+                @include font(17px,
+                20px,
+                $color1,
+                null,
+                null);
+                text-transform: uppercase;
+            }
+            .logo {
+                cursor: inherit;
+                margin-top: 15px;
+                pointer-events: none;
+                .logoImage {
+                    width: 25px;
+                    top: -4px;
+                    width: 25px;
+                    left: -2px;
+                }
+                .logoText {
+                    font-size: 23px;
+                    line-height: 23px;
+                    padding-left: 6px;
+                    .desc {
+                        display: block;
+                        font-size: 11px;
+                        margin-top: -3px;
+                        letter-spacing: 0.03em;
+                    }
+                }
+            }
+        }
+    }
+    .text {
+        @include font(15px,
+        20px,
+        $colorBlack,
+        null,
+        0.025em);
+        display: block;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    textarea {
+        background-color: $back3;
+        @include border-radius(20px);
+        width: calc(100% - 314px);
+        height: 117px;
+        border: 0;
+        font-size: 13px;
+        text-align: left;
+        color: $textColor6;
+        padding: 23px 20px 5px;
+    }
+    .btn {
+        padding: 23px 50px;
+        right: 14px;
+    }
+}
+
+.listCheck {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .itemCheck {
+        input {
+            display: none;
+            &:checked {
+                &+label {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        label {
+            cursor: pointer;
+            padding-left: 25px;
+            position: relative;
+            padding: 8px 0 4px 34px;
+            @include font(15px,
+            18px,
+            $colorBlack,
+            null,
+            0.025em);
+            @include before {
+                top: 50%;
+                width: 26px;
+                height: 26px;
+                border: dashed 1px $colorBlack;
+                @include border-radius(20px);
+                margin-top: -12px;
+                left: -3px;
+            }
+            @include after {
+                left: 4px;
+                top: 50%;
+                width: 12px;
+                height: 12px;
+                background-color: $colorBlack;
+                @include border-radius(50%);
+                margin-top: -5px;
+                opacity: 0;
+            }
+        }
+        &+.itemCheck {
+            margin-left: 34px;
+        }
+    }
+}
+
+.settingsPage {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0 0;
+    .settingLeft,
+    .settingRight {
+        width: calc(50% - 35px);
+    }
+    .inputForm {
+        padding: 134px 93px 95px;
+        min-height: 617px;
+        margin-top: 50px;
+        .inputLine {
+            margin-bottom: 0;
+        }
+    }
+    .settingLeft {
+        .inputForm {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            .inputLine {
+                position: relative;
+                width: 100%;
+                &+.inputLine {
+                    margin-top: 36px;
+                }
+            }
+        }
+    }
+    .settingRight {
+        width: calc(50% - 44px);
+        .inputForm {
+            padding: 99px 101px 95px;
+            .inputLine {
+                margin-top: 38px;
+                position: relative;
+                width: 100%;
+            }
+            label {
+                white-space: nowrap;
+            }
+            .btn {
+                margin-top: 65px;
+            }
+            @include before {
+                left: auto;
+                top: auto;
+                right: -100px;
+                bottom: -100px;
+            }
+            @include after {
+                right: auto;
+                bottom: auto;
+                left: -110px;
+                top: -120px;
+            }
+        }
+    }
+    .btn {
+        padding: 8px 27px;
+        display: table;
+        margin: 86px auto 0;
+        font-size: 15px;
+        &::before {
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            left: -5px;
+            top: -5px;
+        }
+    }
+}
+
+.googleBlock {
+    label {
+        display: block;
+        min-height: 28px;
+    }
+    .num {
+        display: block;
+        @include font(30px,
+        40px,
+        $color1,
+        null,
+        null);
+    }
+    .googlePicture {
+        margin-top: 28px;
+        width: 117px;
+        height: 121px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.supportBlock {
+    display: flex;
+    justify-content: space-between;
+    .supportLeft {
+        width: calc(50% - 88px);
+        padding: 45px 0 0;
+        .capSite {}
+        .contactsInfo {
+            padding: 138px 0 151px;
+            .contactsList {
+                .contactItem {
+                    width: 100%;
+                    .tit {
+                        font-size: 21px;
+                    }
+                    &+.contactItem {
+                        margin-left: 0;
+                        margin-top: 38px;
+                    }
+                }
+            }
+        }
+        .textInfo {
+            max-width: 90%;
+            .tit {
+                display: block;
+                @include font(20px,
+                30px,
+                $color1,
+                null,
+                0.025em);
+                b {
+                    font-weight: bold;
+                }
+            }
+            .txt {
+                @include font(17px,
+                30px,
+                $textColor1,
+                null,
+                0.025em);
+            }
+        }
+    }
+    .supportRight {
+        width: calc(50% + 88px);
+        padding: 45px 0 0;
+        .capSite {}
+        .desc {
+            @include font(17px,
+            20px,
+            $textColor1,
+            null,
+            0.025em);
+            display: block;
+            margin-top: 32px;
+            padding-left: 6px;
+            .imp {}
+        }
+        .inputForm {
+            margin-top: 50px;
+            position: relative;
+            left: 7px;
+            padding: 65px 91px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .inputLine {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: calc(50% - 24px);
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                    margin-bottom: 22px;
+                }
+            }
+        }
+        .btnLine {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            z-index: 2;
+            .btn {
+                top: 23px;
+                padding: 23px 59px;
+                left: -20px;
+                @include after {
+                    background-image: url("../img/str.png");
+                    width: 296px;
+                    height: 132px;
+                    right: calc(100% - 120px);
+                    top: 17px;
+                    pointer-events: none;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+.transactionPage {
+    position: relative;
+    padding: 65px 0 0;
+    .tableTransaction {
+        margin-top: 36px;
+        .cabTable {
+            margin-top: 28px;
+            background: transparent;
+            .cabTbody,
+            .cabThead {
+                .cabTd {
+                    &:nth-child(1) {
+                        padding-left: 13px;
+                        width: 5%;
+                    }
+                    &:nth-child(2) {
+                        width: 9%;
+                    }
+                    &:nth-child(3) {
+                        width: 9%;
+                    }
+                    &:nth-child(4) {
+                        width: 10%;
+                    }
+                    &:nth-child(5) {
+                        width: 8%;
+                    }
+                    &:nth-child(6) {
+                        width: 8%;
+                    }
+                    &:nth-child(7) {
+                        width: 5%;
+                    }
+                    &:nth-child(8) {
+                        width: 5%;
+                    }
+                    &:nth-child(9) {
+                        width: 10%;
+                    }
+                }
+            }
+            .cabThead {
+                .cabTd {
+                    height: 71px;
+                }
+            }
+        }
+    }
+    .pagination {
+        margin-top: 28px;
+    }
+}
+
+.filterBl {
+    @include box-shadow($shadow2);
+    @include border-radius(20px);
+    padding: 20px 0 27px;
+    .inputForm {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding: 0 51px 0 41px;
+        justify-content: space-between;
+        .inputLine {
+            width: calc(27% - 10px);
+            margin-bottom: 22px;
+            &:nth-child(4),
+            &:nth-child(3),
+            &:nth-child(2),
+            &:nth-child(1) {
+                width: calc(10% + 5px);
+            }
+            label {}
+            input {
+                font-family: $fontMain;
+            }
+            .selectric {}
+        }
+        .btn {
+            width: 186px;
+            padding: 7px 0;
+            bottom: 21px;
+            font-size: 14px;
+            &::before {
+                width: calc(100% + 11px);
+                height: calc(100% + 11px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -8px;
+    li {
+        margin: 0 8px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include font(14px,
+            20px,
+            $colorBlack,
+            bold,
+            null);
+            border: dashed 1px $textColor6;
+            @include border-radius(50%);
+            width: 38px;
+            height: 38px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &:hover,
+            &.active {
+                border-color: $color2;
+                color: $color2;
+                background-color: $back1;
+            }
+            &.prev {
+                width: 53px;
+                border: 0;
+                background-image: url("../img/arrow_left.png");
+                margin-right: 25px;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            &.next {
+                width: 53px;
+                border: 0;
+                background-image: url("../img/arrow_right.png");
+                margin-left: 25px;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.shops {
+    padding: 58px 0;
+    .shopList {
+        .shopItem {
+            background-color: $back1;
+            @include border-radius(20px);
+            @include box-shadow($shadow2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0;
+            overflow: hidden;
+            padding-top: 15px;
+            .tit {
+                @include font(13px,
+                13px,
+                $textColor6,
+                null,
+                null);
+                display: block;
+            }
+            .val {
+                @include font(24px,
+                24px,
+                $color1,
+                600,
+                null);
+            }
+            .iconBl {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                font-size: 40px;
+                margin-top: -20px;
+            }
+            .linkSite {
+                font-size: 13px;
+                line-height: 15px;
+                display: table;
+                margin-top: 5px;
+            }
+            .col {
+                position: relative;
+                padding-left: 56px;
+                // width: calc(100% / 6);
+                padding-right: 15px;
+                width: calc((100% - 105px - 345px - 242px) / 3);
+                &:first-child {
+                    padding-left: 33px;
+                    // width: calc(15% - 91px);
+                    width: 105px;
+                }
+                &:nth-child(4){
+                    width: 345px;
+                }
+                &:nth-child(6){
+                    width: 242px;
+                }
+                .num {
+                    font-size: 13px;
+                    display: block;
+                    margin-top: 6px;
+                }
+                .nameShop {
+                    font-size: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 80%;
+                    margin-top: 10px;
+                }
+                .txt,
+                .date {
+                    display: block;
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+                .site {
+                    font-size: 13px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 100%;
+                    margin-top: 11px;
+                    display: block;
+                    float: left;
+                }
+                .currencies {
+                    @include font(15px,
+                    15px,
+                    $color1,
+                    null,
+                    null);
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 3px -6px 0;
+                    span {
+                        margin: 5px 6px;
+                    }
+                }
+            }
+            .shopBalance {
+                background-color: $colorWhite;
+                border-top: dashed 1px $textColor6;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                padding: 25px 20px 25px 219px;
+                margin-top: 15px;
+                .iconBl {
+                    color: $textColor7;
+                    left: 38px;
+                    top: 50%;
+                    margin-top: -23px;
+                     ::before {
+                        color: $textColor7;
+                    }
+                }
+                .btn {
+                    width: calc(20% - 22px);
+                    padding: 10px 27px;
+                    max-width: 235px;
+                    min-width: 235px;
+                    @include before {
+                        background-image: url("../img/arrow_btn.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 29px;
+                        height: 11px;
+                        right: 26px;
+                        top: 50%;
+                        margin-top: -5px;
+                    }
+                }
+                .shopBalanceList {
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+                    .shopBalanceItem {
+                        position: relative;
+                        @include before {
+                            left: calc(-100% - 18px);
+                            width: 111px;
+                            height: 11px;
+                            top: 50%;
+                            background-image: url("../img/arrow_balance.png");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            margin-top: -8px;
+                        }
+                        .tit {}
+                        .val {}
+                        &+.shopBalanceItem {
+                            margin-left: 165px;
+                        }
+                    }
+                }
+            }
+            .copyMessage {
+                top: calc(100% - 18px);
+                margin: auto;
+                left: auto;
+                right: auto;
+            }
+            &+.shopItem {
+                margin-top: 69px;
+            }
+        }
+    }
+    .createStore {
+        margin-top: 77px;
+    }
+}
+
+.checkBlock {
+    position: relative;
+    z-index: 5;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    label {
+        position: relative;
+        padding-left: 54px;
+        cursor: pointer;
+        display: block;
+        @include font(13px,
+        22px,
+        $colorBlack,
+        null,
+        null);
+        @include before {
+            background-color: $back3;
+            @include border-radius(10px);
+            width: 35px;
+            height: 35px;
+            left: 3px;
+            top: 50%;
+            margin-top: -17px;
+        }
+        @include after {
+            background-image: url("../img/arrow_chek.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            left: 4px;
+            top: 50%;
+            opacity: 0;
+            margin-top: -17px;
+        }
+    }
+    input {
+        display: none;
+        &:checked {
+            &+label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.cabCreateShop {
+    .createShopBlock {}
+    .docsDeveloper {}
+}
+
+.createShopBlock {
+    padding: 89px 55px 101px 86px;
+    margin-top: 74px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .inputForm {
+        width: calc(100% - 378px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .inputLine {
+            width: calc(50% - 20px);
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
+    .textInfo {
+        width: 348px;
+        padding: 24px 0px 24px 33px;
+        font-size: 13px;
+        letter-spacing: 0.025em;
+        p {
+            &+p {
+                margin-top: 22px;
+            }
+            &+a {
+                display: table;
+                margin-top: 9px;
+            }
+        }
+        a {
+            &+p {
+                margin-top: 23px;
+            }
+        }
+        .checkBlock {
+            margin-top: 41px;
+        }
+    }
+    .currencyCreate {
+        padding: 15px 4px 0;
+        width: calc(80% - 105px);
+        .title {
+            @include font(15px,
+            17px,
+            $colorBlack,
+            null,
+            0.025em);
+        }
+        .currencylist {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: -10px;
+            margin-top: 32px;
+            .checkBlock {
+                margin: 10px;
+                width: calc(100% / 8 - 20px);
+                min-width: 100px;
+                input {
+                    &:checked {
+                        &+label {
+                            background-color: $back1;
+                            color: $color2;
+                            &::before {
+                                background-color: $colorWhite;
+                            }
+                        }
+                    }
+                }
+                label {
+                    background-color: $colorWhite;
+                    @include box-shadow($shadow2);
+                    height: 50px;
+                    padding-right: 16px;
+                    @include border-radius(10px);
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    &::before {
+                        left: 6px;
+                    }
+                    &::after {
+                        left: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .btn {
+        margin-top: 71px;
+        padding: 23px 55px 23px 91px;
+        right: 45px;
+        font-size: 17px;
+    }
+}
+
+.docsDeveloper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 85px 0 0;
+    .capSite {
+        width: 100%;
+    }
+    .picture {
+        width: 50%;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 82px;
+        right: -27px;
+        position: absolute;
+    }
+    .listText {
+        width: calc(50% - 15px);
+        margin-top: 50px;
+        .item {
+            padding: 33px 31px 48px 51px;
+            background-color: $colorWhite;
+            @include box-shadow($shadow2);
+            @include border-radius(20px);
+            font-size: 17px;
+            letter-spacing: 0.025em;
+            .txt {
+                &+* {
+                    margin-top: 35px;
+                }
+            }
+            .linkSite {
+                display: table;
+                font-size: 17px;
+                &+.linkSite {
+                    margin-top: 11px;
+                }
+            }
+            &+.item {
+                margin-top: 33px;
+            }
+        }
+    }
+    .infoTextIp {
+        @include font(17px,
+        28px,
+        $color2,
+        null,
+        null);
+        @include border-radius(20px);
+        @include box-shadow($shadow2);
+        background-color: $back1;
+        border: dashed 1px $color2;
+        margin-top: 66px;
+        padding: 18px 49px 22px;
+        letter-spacing: 0.025em;
+    }
+}
+
+.shop {
+    .shopName {
+        display: flex;
+        align-items: flex-start;
+        max-width: 80%;
+        .capSite {
+            min-width: 50%;
+            max-width: 80%;
+        }
+        .btn {
+            top: 11px;
+            padding: 6px 25px 6px 42px;
+            font-size: 15px;
+            letter-spacing: 0.025em;
+            &::before {
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+    }
+    .shopInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0;
+        .item {
+            width: calc(25% - 21px);
+            background-color: $colorWhite;
+            @include box-shadow($shadow2);
+            @include border-radius(20px);
+            position: relative;
+            padding: 0 5px 0 105px;
+            min-height: 107px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            .iconBl {
+                position: absolute;
+                left: 44px;
+                top: 50%;
+                font-size: 30px;
+                margin-top: -15px;
+                &[class~="icon-1"] {
+                    font-size: 40px;
+                    margin-top: -20px;
+                }
+                &[class~="icon-17"] {
+                    font-size: 35px;
+                    margin-top: -17px;
+                }
+            }
+            .tit {
+                width: 100%;
+                @include font(13px,
+                13px,
+                $textColor6,
+                null,
+                null);
+                font-size: 13px;
+                display: block;
+            }
+            .txt {
+                width: 100%;
+                @include font(15px,
+                17px,
+                $color1,
+                null,
+                null);
+                margin-top: 11px;
+                position: relative;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &+* {
+                    margin-top: 5px;
+                    display: table;
+                }
+            }
+            .linkSite {
+                font-size: 13px;
+                margin-top: 11px;
+            }
+            .copyMessage {
+                width: 100%;
+                top: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+    .connectedCurrrencies {
+        position: relative;
+        padding: 17px 0;
+        .capSite {}
+        .btnCreateWallet {
+            position: absolute;
+            right: 0;
+            top: 28px;
+            padding: 6px 26px 6px 54px;
+            font-size: 15px;
+            letter-spacing: 0.025em;
+            z-index: 5;
+            &::before {
+                width: calc(100% + 10px);
+                height: calc(100% + 10px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+        .listCurrenceis {
+            margin-top: 62px;
+            .itemCurrenceis {
+                position: relative;
+                @include border-radius(20px);
+                background-color: $back3;
+                .infoCurrenceis {
+                    position: relative;
+                    padding: 24px 0 20px 160px;
+                    display: flex;
+                    align-items: center;
+                    background-color: $colorWhite;
+                    @include box-shadow($shadow2);
+                    @include border-radius(20px);
+                }
+                .descCurrenceis {
+                    display: none;
+                    @include border-radius-bottom-right(20px);
+                    @include border-radius-bottom-left(20px);
+                    @include font(13px,
+                    18px,
+                    $textColor1,
+                    null,
+                    0.025em);
+                    padding: 31px 38px 27px;
+                    .txt {
+                        display: inline-block;
+                        @include font(15px,
+                        20px,
+                        $colorBlack,
+                        null,
+                        null);
+                    }
+                    .inputLine {
+                        width: calc(35% - 9px);
+                        display: inline-block;
+                        position: relative;
+                        margin-left: 15px;
+                        input {
+                            background-color: $colorWhite;
+                            @include box-shadow($shadow2);
+                            @include border-radius(20px);
+                            border: 0;
+                            padding: 0 15px;
+                            @include font(13px,
+                            15px,
+                            $textColor6,
+                            null,
+                            null);
+                            height: 45px;
+                            width: 100%;
+                            background-image: url("../img/chek_red.png");
+                            background-position: calc(100% - 16px) center;
+                            background-repeat: no-repeat;
+                            padding-right: 39px;
+                        }
+                    }
+                }
+                .checkBlock {
+                    position: absolute;
+                    left: 29px;
+                    top: 50%;
+                    margin-top: -17px;
+                    width: 35px;
+                    height: 35px;
+                    label {}
+                    @include before {
+                        content: attr(data-title);
+                        @include font(13px,
+                        15px,
+                        $colorBlack,
+                        null,
+                        null);
+                        opacity: 0;
+                        position: absolute;
+                        top: -43px;
+                        left: 0px;
+                        background-color: $colorWhite;
+                        @include box-shadow($shadow2);
+                        @include border-radius(5px);
+                        width: 260px;
+                        padding: 8px 5px;
+                        pointer-events: none;
+                    }
+                }
+                .col {
+                    position: relative;
+                    &.currenceisName {
+                        width: calc(15% - 33px);
+                    }
+                    &.currenceisBalance {
+                        width: calc(15% - 30px);
+                    }
+                    &.currenceisNum {
+                        width: calc(15% - 30px);
+                    }
+                    &.currenceisTxt {
+                        width: calc(30% + 23px);
+                        padding: 0 15px;
+                    }
+                    .pic {
+                        position: absolute;
+                        left: -68px;
+                        top: 50%;
+                        margin-top: -22px;
+                        width: 48px;
+                        height: 45px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                    .tit {
+                        display: block;
+                        margin-bottom: 4px;
+                        @include font(13px,
+                        15px,
+                        $textColor6,
+                        null,
+                        null);
+                    }
+                    .name {
+                        @include font(15px,
+                        15px,
+                        $color1,
+                        600,
+                        null);
+                        display: block;
+                        margin-top: 14px;
+                    }
+                    .num {
+                        @include font(15px,
+                        15px,
+                        $color1,
+                        600,
+                        null);
+                        display: block;
+                        margin-top: 4px;
+                        margin-bottom: 5px;
+                    }
+                    .linkSite {
+                        font-size: 13px;
+                    }
+                    .val {
+                        display: block;
+                        @include font(15px,
+                        15px,
+                        $color2,
+                        600,
+                        null);
+                        &+.val {
+                            margin-top: 5px;
+                            color: $color4;
+                        }
+                    }
+                    .txt {
+                        display: block;
+                        @include font(11px,
+                        14px,
+                        $textColor9,
+                        null,
+                        null);
+                    }
+                    .copyMessage {
+                        left: -4px;
+                        top: calc(100% - 22px);
+                    }
+                    &+.col {}
+                }
+                .btn {
+                    padding: 10px 0;
+                    max-width: 140px;
+                    width: 100%;
+                    &+.btn {
+                        margin-left: 16px;
+                    }
+                }
+                .circle {
+                    cursor: pointer;
+                    width: 48px;
+                    height: 48px;
+                    background-color: $back3;
+                    @include border-radius(50%);
+                    margin-top: -24px;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    z-index: 5;
+                    text-align: center;
+                    @include transition(all 0.3s);
+                    &.open {
+                        background-color: $color4;
+                        @include transform(rotate(#{-180}deg));
+                        &::before {
+                            color: $colorWhite;
+                        }
+                    }
+                    &::before {
+                        content: "\e928";
+                        font-family: "icomoon" !important;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-top: -20px;
+                        @include transition(all 0.3s);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        font-size: 12px;
+                        line-height: 50px;
+                    }
+                    &:hover {
+                        background-color: $color4;
+                        color: $colorWhite;
+                    }
+                }
+                &+.itemCurrenceis {
+                    margin-top: 35px;
+                }
+                &.basic {
+                    .infoCurrenceis {
+                        background-color: $back1;
+                        .checkBlock {
+                            label {
+                                &::before {
+                                    background-color: $colorWhite;
+                                }
+                            }
+                            &:hover {
+                                &::before {
+                                    pointer-events: inherit;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        .circle {
+                            &:not(:hover) {
+                                background-color: $colorWhite;
+                            }
+                            &.open {
+                                background-color: $color4;
+                                &::before {
+                                    color: $colorWhite;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .shopState {
+        margin-top: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .item {
+            position: relative;
+            width: calc(25% - 18px);
+            background-color: $colorWhite;
+            @include box-shadow($shadow2);
+            @include border-radius(20px);
+            padding: 29px 15px 24px 108px;
+            .iconBl {
+                position: absolute;
+                left: 43px;
+                top: 50%;
+                font-size: 43px;
+                margin-top: -24px;
+            }
+            .tit {
+                display: block;
+                margin-bottom: 4px;
+                @include font(13px,
+                15px,
+                $textColor6,
+                null,
+                null);
+            }
+            .val {
+                display: block;
+                @include font(20px,
+                24px,
+                $color1,
+                600,
+                null);
+            }
+        }
+    }
+    .shopTabs {
+        position: relative;
+        margin-top: 79px;
+        &.tabs {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            .listLinks {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: solid 1px $back4;
+                li {
+                    width: calc(100% / 3);
+                    padding: 0;
+                    margin: 0;
+                    border: 0;
+                    background: transparent;
+                    position: relative;
+                    &.ui-tabs-active {
+                        a {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &:not(.ui-tabs-active) {
+                        a {
+                            .path1,
+                            .path2,
+                            .path3 {
+                                &::before {
+                                    color: $back5;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include font(17px,
+                        27px,
+                        $color1,
+                        600,
+                        0.025em);
+                        padding: 4px 4px 15px 43px;
+                        text-align: center;
+                        .iconBl {
+                            position: relative;
+                            left: 0;
+                            top: 0;
+                            margin-right: 15px;
+                            font-size: 22px;
+                        }
+                        @include before {
+                            left: 0;
+                            bottom: 0;
+                            background-color: $color2;
+                            width: 0;
+                            height: 3px;
+                        }
+                    }
+                    &+li {}
+                }
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+            .tabsBody {
+                background-color: $colorWhite;
+                @include border-radius(20px);
+            }
+            .btn {
+                font-family: $fontMain;
+            }
+        }
+        .shopOperation {
+            padding: 80px 0 0;
+            .tableStoreHistory {
+                margin-top: 48px;
+                .cabTable {
+                    background: transparent;
+                    @include box-shadow(none);
+                }
+            }
+            .pagination {
+                margin-top: 50px;
+            }
+        }
+        .shopSettings {
+            padding: 70px 90px 0;
+            .inputForm {
+                background-color: $colorWhite;
+                @include box-shadow($shadow2);
+                @include border-radius(20px);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 50px 30px;
+                .inputLine {
+                    width: calc(50% - 9px);
+                }
+                .btn {
+                    display: table;
+                    margin: 0 auto;
+                    padding: 15px;
+                    display: table;
+                    margin: 38px auto;
+                    padding: 7px 27px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .timeAdress {
+            padding: 50px 0 37px;
+            .inputForm {
+                padding: 50px 36px 29px;
+                background-color: $colorWhite;
+                @include box-shadow($shadow2);
+                @include border-radius(20px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .inputLine {
+                    width: calc(27% - 15px);
+                }
+                .hideZeroBalance {
+                    position: relative;
+                    right: auto;
+                    top: -3px;
+                }
+                .btn {
+                    min-width: 210px;
+                }
+            }
+        }
+        .btn {
+            text-align: center;
+            padding: 8px 0;
+            &::before {
+                width: calc(100% + 11px);
+                height: calc(100% + 11px);
+                left: -5px;
+                top: -5px;
+            }
+        }
+        .tableAdress {
+            .cabTable {
+                background: transparent;
+                @include box-shadow(none);
+                .cabTd {
+                    width: calc(100% / 5 + 15px);
+                    height: 73px;
+                    min-width: 18%;
+                    &:last-child {
+                        width: 18%;
+                    }
+                }
+            }
+            .btn {
+                font-size: 13px;
+                width: 100%;
+            }
+            &+.pagination {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+
+/*animations*/
+
+#canvas {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    pointer-events: none;
+    width: 1920px;
+    margin-left: -555px;
+}
+
+
+/* /animations*/
+
+.captchaBlock {
+    img {}
+}
+
+.restoreModals {
+    position: relative;
+    padding: 195px 77px 106px 80px;
+    .inputForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .inputLine {
+            width: calc(50% - 19px);
+            label {}
+            input {}
+        }
+        .btn {
+            padding: 18px 30px;
+            top: -3px;
+            font-size: 18px;
+        }
+    }
+    .lineHandler {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 17px;
+        justify-content: space-between;
+        .captchaBlock {}
+        .btn {}
+    }
+    .text {
+        display: block;
+        margin-top: 38px;
+        @include font(15px,
+        25px,
+        $textColor1,
+        null,
+        0.025em);
+    }
+}
+
+.loginModals {
+    position: relative;
+    padding: 195px 77px 10px 80px;
+    .inputForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .inputLine {
+            width: calc(50% - 19px);
+        }
+        .checkBlock {
+            width: calc(50% - 19px);
+            label {
+                color: $textColor1;
+                font-size: 15px;
+            }
+            .linkSite {
+                display: table;
+            }
+        }
+        .btn {
+            padding: 16px 15px;
+            top: 2px;
+            font-size: 18px;
+            right: 30px;
+            max-width: 265px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .lineHandler {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 17px;
+        justify-content: space-between;
+        .captchaBlock {}
+        .btn {}
+    }
+    .linksModals {
+        margin-top: 61px;
+        padding: 46px 0;
+        border-top: dashed 1px $textColor6;
+        a {
+            display: table;
+            margin: 0 auto;
+            &+a {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.getCryptoModals {
+    padding: 172px 83px 80px;
+    &::before {
+        left: -122px !important;
+    }
+    .capSite {
+        top: 74px;
+    }
+    .inputForm {
+        .inputLine {}
+    }
+    .lineHandler {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        .inputLine {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            label {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .picQRcode {
+                width: 90px;
+                height: 90px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .linkSite {
+                margin-left: 23px;
+            }
+        }
+        .btn {
+            padding: 18px 54px;
+            position: relative;
+            top: -2px;
+            left: 9px;
+            font-size: 17px;
+        }
+        .copyMessage {
+            top: 100%;
+        }
+    }
+}
+
+.createWalletModal {
+    padding: 230px 129px 131px 123px;
+    .capSite {
+        line-height: 30px;
+        left: 124px;
+        top: 75px;
+    }
+    &::before {
+        left: -173px !important;
+    }
+    .inputForm {
+        .inputLine {}
+    }
+    .btn {
+        width: 94%;
+        padding: 16px 0;
+        margin: 33px auto 0;
+        font-size: 17px;
+        left: 11px;
+    }
+}
+
+.develModal {
+    padding: 166px 55px 50px;
+    .capSite {}
+    .code {
+        width: 100%;
+        height: 750px;
+        overflow: auto;
+    }
+    &::before {
+        background-image: url("../img/bgmodalbig.png");
+        left: -13px !important;
+        width: 1213px;
+        height: 124px;
+        top: 1px;
+    }
+}
+
+#modal_createwallet {
+    max-width: 640px;
+}
+
+#modal_getcrypto {
+    max-width: 691px;
+}
+
+#modal_developer {
+    max-width: 1200px;
+}
+
+#modal_send {
+    max-width: 839px;
+}
+
+.pageWrapper {
+    .menuLineMobile {
+        display: none;
+        height: 85px;
+        background: transparent;
+        @include box-shadow(none);
+        left: -15px;
+        top: -20px;
+        width: calc(100% + 30px);
+        @include transition(all 0.3s);
+        &.open {
+            background-color: $colorWhite;
+            @include box-shadow($shadow2);
+            z-index: 6;
+        }
+    }
+}
+
+.sendCoinModal {
+    padding: 173px 100px 90px 81px;
+    &::before {
+        background-image: url("../img/bgmodalbig2.png");
+        left: 0px !important;
+        width: 839px;
+        height: 124px;
+        top: 2px;
+    }
+    .capSite {
+        top: 75px;
+    }
+    .inputForm {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .inputLine {
+            width: calc(50% - 25px);
+            &.inputTo {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                label {
+                    width: 100%;
+                }
+                input {
+                    width: calc(100% - 45px);
+                }
+                .btnScan {}
+            }
+            &.inputDesc {
+                width: 100%;
+            }
+            &.inputCommision {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                label {
+                    width: 100%;
+                }
+                .comm {
+                    font-size: 13px;
+                    color: $color2;
+                }
+                .selectric-wrapper {
+                    width: calc(50% - 28px);
+                }
+                .valueBlock {
+                    min-width: 145px;
+                    .value {
+                        display: block;
+                        @include font(14px,
+                        20px,
+                        $colorBlack,
+                        bold,
+                        null);
+                    }
+                    .linkSite {
+                        font-size: 13px;
+                    }
+                }
+                .descTxt {
+                    @include font(12px,
+                    18px,
+                    $color2,
+                    null,
+                    null);
+                    border: dashed 1px $color2;
+                    @include border-radius(15px);
+                    display: block;
+                    width: 100%;
+                    margin-top: 19px;
+                    padding: 13px 22px 16px;
+                }
+            }
+        }
+        .inputList {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 27px;
+            .inputLine {
+                margin-bottom: 0;
+            }
+            label {
+                width: 100%;
+            }
+        }
+        .btnScan {
+            border: solid 1px $textColor10;
+            @include border-radius(50%);
+            @include transition(all 0.3s);
+            background-image: url("../img/pic_scan.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+            &:hover {
+                @include box-shadow($shadow2);
+            }
+        }
+        .txtTime {
+            display: block;
+            width: 100%;
+            @include font(13px,
+            18px,
+            $textColor6,
+            null,
+            null);
+        }
+        .btnLine {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 53px;
+            padding: 0 14px 0 0;
+            width: 100%;
+            .checkBlock {
+                label {
+                    font-size: 15px;
+                }
+            }
+            .btn {
+                padding: 17px 78px;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.modalsContent{
+    .selectric-items {
+        .selectric-scroll {
+            max-height: 221px;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.btn {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    @include transition(all 0.3s);
+    &.btnYellow {
+        @include font(15px, 25px, $colorWhite, null, null);
+        @include border-radius(50px);
+        background-color: $color4;
+        &.open,
+        &:hover {
+            background-color: $color2;
+        }
+        &.btnBorder {
+            &:before {
+                border-color: $color4;
+            }
+            &:hover {
+                &::before {
+                    border-color: $color2;
+                    opacity: 0.77;
+                }
+            }
+        }
+    }
+    &.btnRed {
+        @include font(17px, 25px, $colorWhite, null, 0.025em);
+        @include border-radius(50px);
+        background-color: $color2;
+        &.open,
+        &:hover {
+            background-color: $color4;
+        }
+    }
+    &.btnBorder {
+        font-weight: 600;
+        @include before {
+            width: calc(100% + 29px);
+            height: calc(100% + 25px);
+            left: -15px;
+            top: -12px;
+            @include border-radius(50px);
+            border: dashed 1px $color2;
+        }
+        &.open,
+        &:hover {
+            &::before {
+                border-color: $color4;
+                opacity: 0.77;
+            }
+        }
+    }
+    &.btnFullYellow {
+        @include font(15px, 25px, $colorWhite, null, null);
+        @include border-radius(50px);
+        border: dashed 1px $color4;
+        color: $color4;
+        &:hover {
+            background-color: $color4;
+            color: $colorWhite;
+        }
+    }
+    &.btnFullRed {
+        @include font(15px, 25px, $colorWhite, null, null);
+        @include border-radius(50px);
+        border: dashed 1px $color2;
+        color: $color2;
+        &:hover {
+            background-color: $color2;
+            color: $colorWhite;
+        }
+    }
+    &.btnFullBlack{
+        @include font(15px, 25px, $colorBlack, null, null);
+        @include border-radius(50px);
+        border: dashed 1px $colorBlack;
+        color: $colorBlack;
+        &:hover {
+            background-color: $colorBlack;
+            color: $colorWhite;
+        }
+    }
+    &.btnBack {
+        position: relative;
+        z-index: 5;
+        padding: 10px 25px 10px 69px;
+        @include before {
+            left: 28px;
+            top: 50%;
+            margin-top: -5px;
+            background-image: url("../img/arrow_btn.png");
+            width: 29px;
+            height: 11px;
+            @include transform(rotate(#{-180}deg));
+            z-index: -1;
+            opacity: 1;
+        }
+        @include after {
+            left: 28px;
+            top: 50%;
+            margin-top: -5px;
+            background-image: url("../img/arrow_btn_white.png");
+            width: 29px;
+            height: 11px;
+            @include transform(rotate(#{-180}deg));
+            z-index: -1;
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    &.btnChek {
+        .iconBl{
+            font-size: 20px;
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            margin-top: -10px;
+        }
+    }
+    &.btnDelete{
+        background-image: url("../img/btn_delete.png");
+        background-repeat: no-repeat;
+        background-position: 21px center;
+        padding-left: 15px;
+    }
+    &.btnCreateWallet{
+        background-image: url("../img/plus2white.png");
+        background-repeat: no-repeat;
+        background-position: 21px center;
+        padding-left: 15px;
+    }
+}

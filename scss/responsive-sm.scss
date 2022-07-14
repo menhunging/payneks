@@ -1,0 +1,860 @@
+//1023px
+@media (max-width: $maxMediaSM) {
+    .container {
+        width: $containerSM;
+        padding: 0 15px;
+    }
+    .pageWrapper {
+        .menuLineMobile {
+            display: block;
+        }
+    }
+    .menuBurger {
+        display: block;
+    }
+    .grettingsBlock {
+        padding: 85px 0 97px;
+        .grettingCap {
+            max-width: 100%;
+        }
+        .grettingText {
+            max-width: 100%;
+        }
+    }
+    .header {
+        &::before {
+            margin-left: -1126px;
+        }
+        .headerWrap {
+            position: relative;
+            justify-content: flex-start;
+            .nav {
+                display: none;
+                position: absolute;
+                left: -15px;
+                top: calc(100% + 15px);
+                width: calc(100% + 30px);
+                z-index: 5;
+                @include border-radius-bottom-left(20px);
+                @include border-radius-bottom-right(20px);
+                .navList {
+                    display: block;
+                    background-color: $back1;
+                    li {
+                        width: 100%;
+                        & + li {
+                            margin-left: 0;
+                            border-top: dashed 1px $textColor6;
+                        }
+                        &.mobile {
+                            display: block;
+                            a {
+                                background-color: $back7;
+                            }
+                        }
+                        a {
+                            font-weight: 600;
+                            font-size: 17px;
+                            padding: 27px 15px;
+                            &:hover {
+                                background-color: $back1;
+                            }
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                    .navSub {
+                        display: none !important;
+                    }
+                }
+            }
+            .authBlock {
+                order: 3;
+                margin-left: 100px;
+            }
+            .langBlock {
+                order: 4;
+                margin-left: 29px;
+            }
+        }
+        .paymentMethodsCount {
+            right: -217px;
+            bottom: -163px;
+        }
+    }
+    .stateLine {
+        padding: 200px 0 0;
+        .stateList {
+            max-width: 100%;
+            .item {
+                padding-right: 50px;
+            }
+        }
+    }
+    .textToh,
+    .capToh {
+        &::before {
+            display: none;
+        }
+    }
+    .textBlockWrap {
+        .wrap {
+            flex-wrap: wrap;
+            .picture {
+                top: auto;
+                left: auto;
+                background-size: auto;
+                width: 100%;
+            }
+            .textBlock {
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
+    .cryptoBlock {
+        .wrap {
+            .cryptoList {
+                row-gap: 15px;
+                column-gap: 15px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .cryptoDesc {
+                max-width: 80%;
+            }
+        }
+    }
+    .howConnectBlock {
+        .wrap {
+            .connectList {
+                flex-wrap: wrap;
+                .connectItem {
+                    margin-bottom: 50px;
+                    width: calc(50% - 15px);
+                    &:nth-child(2n)::before {
+                        top: 61px;
+                        background-position: -120px center;
+                        background-repeat: no-repeat;
+                    }
+                    &:nth-child(3) {
+                        @include after {
+                            background-image: url("../img/str1.png");
+                            width: 218px;
+                            height: 49px;
+                            right: calc(50% + 75px);
+                            top: 81px;
+                            background-position: -30px center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobilePanelTab {
+        display: block;
+        padding: 25px 0;
+    }
+    .mobileTab {
+        display: none;
+        border-bottom: solid 1px $back4;
+    }
+    .whyBlock {
+        margin-bottom: 200px;
+        .capSite {
+            font-size: 40px;
+        }
+    }
+    .whyTabs {
+        .listLinks {
+            display: none !important;
+        }
+        .tabsBody {
+            display: block !important;
+            min-height: auto !important;
+        }
+        .mobilePanelTab {
+        }
+        .textBlockWrap {
+            padding: 0;
+            .wrap {
+                padding: 135px 0 50px;
+                .picture {
+                    top: 0;
+                    left: auto;
+                    margin: 0 auto;
+                }
+                .textToh {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .footer {
+        .footerWrap {
+            .footerLeft {
+                max-width: 50%;
+            }
+            .footerRight {
+                max-width: 50%;
+                top: 0;
+                .footerMenu {
+                    margin: -10px;
+                    .link {
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .grettingsPage {
+        padding: 65px 0 0;
+    }
+    .searchBlock {
+        top: -60px;
+        &::before {
+            display: none;
+        }
+    }
+    .faqPage {
+        min-height: 700px;
+        padding: 43px 0 200px;
+    }
+    .textSimple {
+        h2 {
+            font-size: 40px;
+            line-height: 45px;
+        }
+        & > span {
+            font-size: 18px;
+            line-height: 30px;
+            max-width: 100%;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    .agreementsText {
+        .textSimple {
+            ul {
+                li {
+                    font-size: 14px;
+                    line-height: 24px;
+                    &::before {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .agreementsTop {
+        .textSimple {
+            max-width: 100%;
+            .capSite {
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+    }
+    .agreementsPage {
+        .agreementsTop {
+            padding: 50px 0;
+        }
+        .agreementsText {
+            padding: 20px 0 170px;
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            padding: 50px 0;
+            .wrap {
+                .picture {
+                    top: 0;
+                    left: 0;
+                }
+                .textBlock {
+                    margin-top: 0;
+
+                    .btn {
+                        margin-top: 43px;
+                    }
+                }
+            }
+        }
+    }
+    .textLine {
+        p {
+            column-count: 1;
+            column-gap: 5em;
+        }
+    }
+    .blockCTA {
+        .textBlockWrap {
+            .wrap {
+                .textBlock {
+                    .capSite {
+                        font-size: 30px;
+                        & + * {
+                            margin-top: 15px;
+                        }
+                    }
+                    .picture {
+                        height: 310px;
+                    }
+                }
+            }
+        }
+    }
+    .systemPage {
+        padding: 50px 0;
+
+        .systemtext {
+            .textBlockWrap {
+                padding: 40px 0;
+                .capSite {
+                    font-size: 40px;
+                    & + * {
+                        margin-top: 15px;
+                    }
+                }
+                .wrap {
+                    .picture {
+                        top: 0;
+                        left: 0;
+                    }
+                    .capSite {
+                        font-size: 30px;
+                    }
+                    .textBlock {
+                        margin-top: 0;
+                        width: 100%;
+                        .btn {
+                            margin-top: 35px;
+                            left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .partnersPage {
+        .textBlockWrap {
+            .wrap {
+                .textBlock {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .calcProfit {
+        padding: 50px 0 230px;
+        .calcProfitInner {
+            flex-wrap: wrap;
+        }
+        .calcProfitLeft {
+            width: 100%;
+        }
+        .calcProfitRight {
+            width: 100%;
+        }
+        .calcProfitList {
+            .item {
+                .value {
+                    font-size: 35px;
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+    .mershPage {
+        .textBlockWrap {
+            &:not(.textLeft) {
+                .textBlock {
+                    width: 100%;
+                    .capSite {
+                        font-size: 30px;
+                        line-height: 40px;
+                        & + * {
+                            margin-top: 15px;
+                        }
+                    }
+                    .btn {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+        .mersInfoWrap {
+            padding: 50px 0;
+            .infoMersh {
+                li {
+                    .picture {
+                    }
+                }
+            }
+        }
+        .blockCTA {
+            .textBlockWrap {
+                padding: 50px 0;
+            }
+        }
+    }
+    .developersPage {
+        padding-bottom: 170px;
+        .fastStartBlock {
+            .fastStartList {
+                .item {
+                    .capSite {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            padding: 50px 0;
+            .fastStartTop {
+                .capSite {
+                    font-size: 30px;
+                    max-width: 100%;
+                    line-height: 40px;
+                }
+                .picture {
+                    position: relative;
+                    width: 100%;
+                    height: 450px;
+                    top: auto;
+                    right: auto;
+                    background-size: contain;
+                    margin: 50px 0 0;
+                }
+            }
+        }
+        .textBlockWrap {
+            &:not(.textLeft) {
+                .wrap {
+                    .picture {
+                        top: 0;
+                        left: 0;
+                    }
+                    .textBlock {
+                        width: 100%;
+                        .capSite {
+                            font-size: 30px;
+                            line-height: 47px;
+                        }
+                    }
+                }
+            }
+        }
+        .apiLine {
+            .list {
+                justify-content: space-between;
+                .item {
+                    max-width: calc(50% - 15px);
+                    margin: 0;
+                    padding: 25px;
+                    .txt {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .tarifsBlock {
+        padding: 110px 0 167px;
+        .wrap {
+            .joinBl {
+                max-width: 100%;
+                width: 100%;
+                margin-top: 30px;
+                .text {
+                    span {
+                    }
+                }
+            }
+        }
+    }
+    .tarifPage {
+        .textBlockWrap {
+            padding: 0px 0 35px;
+            &:not(.textLeft) {
+                .textBlock {
+                    width: 100%;
+                    .capSite {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                    .textToh {
+                        margin-top: 28px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .blockCTA {
+            .textBlockWrap {
+                padding: 100px 0 50px;
+            }
+        }
+    }
+    .tarifsBlock {
+        padding: 50px 0 170px;
+        .wrap {
+            .capSite {
+                font-size: 35px;
+            }
+        }
+    }
+    .youBalance {
+        .balance {
+            width: 25%;
+        }
+        .listBalance {
+            width: calc(70% - 2px);
+        }
+    }
+    .cabMenu {
+        flex-wrap: wrap;
+        .grettingsCab {
+            width: 100%;
+            order: 2;
+            .line {
+                padding: 15px 15px 15px 80px;
+                width: calc(50% - 18px);
+                & + .line {
+                    margin-left: 0;
+                }
+                .iconBl {
+                    top: 50%;
+                    margin-top: -17px;
+                }
+            }
+        }
+        .btnLine {
+            order: 1;
+            width: 100%;
+            margin-top: -15px;
+            padding-top: 40px;
+            .btn {
+                width: calc(50% - 18px);
+                & + .btn {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .cabContent {
+        padding: 41px 10px;
+    }
+    .hideZeroBalance {
+        top: 51px;
+    }
+    .cabTable {
+        .cabTbody {
+            .cabTr {
+                .cabTd {
+                    padding: 15px !important;
+                }
+            }
+        }
+    }
+    .cabinetPage {
+        .tableCryptoBalance {
+            padding: 15px 0;
+            .cabTable {
+                .cabTbody {
+                    .cabTr {
+                        margin: 15px;
+                    }
+                    .cabTd {
+                        &:nth-child(5) {
+                            width: 100% !important;
+                        }
+                        &:nth-child(6) {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+        .tableCryptoHistory {
+            padding: 30px 0 0;
+            .cabTable {
+                margin-top: 15px;
+            }
+        }
+        .tableStoreHistory {
+            padding: 30px 0 0;
+            .cabTable {
+                margin-top: 15px;
+            }
+        }
+    }
+    .tableTransaction {
+        padding: 30px 0 0;
+        .cabTable {
+            margin-top: 15px;
+        }
+    }
+    .yourStores {
+        .yourStoresList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            .item {
+                width: calc(50% - 15px);
+                flex-wrap: wrap;
+                padding: 10px 0;
+                .col {
+                    padding: 10px 5px 10px 75px;
+                    width: 100% !important;
+                    &:first-child {
+                        padding-left: 19px;
+                    }
+                    .iconBl {
+                        left: 15px;
+                        top: 10px;
+                    }
+                }
+                & + .item {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                padding: 25px 85px 0 0;
+                .walletsCol {
+                    width: calc(100% / 3 - 15px) !important;
+                    max-width: 100% !important;
+                    &.walletChange {
+                        width: 100% !important;
+                    }
+                    &.walletBalance {
+                        width: 100% !important;
+                        padding: 15px 5px 15px 94px;
+                        display: flex;
+                        align-items: center;
+                        .tit {
+                            margin-bottom: 0;
+                        }
+                        .balanceVal {
+                            margin-left: 15px;
+                            & + .balanceVal {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    .changeNameWallet {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+    .cabinetBanners {
+        margin-top: 30px;
+        .listBanners {
+            margin: 30px 0;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+        }
+        textarea {
+            padding: 20px;
+            height: 120px;
+        }
+    }
+    .filterBl {
+        .inputForm {
+            .btn,
+            .inputLine {
+                width: calc(50% - 10px) !important;
+            }
+        }
+    }
+    .transactionPage {
+        padding: 30px 0 0;
+        .tableTransaction {
+            margin-top: 0;
+        }
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .col {
+                    width: calc((100% - 105px) / 2);
+                    &:nth-child(4){
+                        width: calc((100% - 105px) / 2 + 75px);
+                        order: 0;
+                    }
+                    &:nth-child(5){
+                        margin-top: 15px;
+                    }
+                    &:nth-child(6) {
+                        left: 30px;
+                        width: 100%;
+                    }
+                }
+                .shopBalance {
+                    padding: 25px 25px 25px 100px;
+                    flex-wrap: wrap;
+                    .iconBl {
+                        top: 24px;
+                        margin-top: 0;
+                    }
+                    .shopBalanceList {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                    .btn {
+                        margin-top: 10px;
+                        left: -55px;
+                    }
+                }
+            }
+        }
+    }
+    .cabContent {
+        .btnBack {
+            top: 44px;
+        }
+    }
+    .createShopBlock {
+        flex-wrap: wrap;
+        margin-top: 30px;
+        .textInfo {
+            width: 348px;
+            padding: 0;
+        }
+        .inputForm {
+            width: 100%;
+        }
+        .currencyCreate {
+            padding: 0;
+            width: calc(80% - 300px);
+        }
+        .btn {
+            padding: 10px 45px 10px 65px;
+            margin-top: 30px;
+            right: auto;
+            .iconBl {
+                left: 0;
+                left: 30px;
+                margin-top: -7px;
+                font-size: 16px;
+            }
+        }
+    }
+    .docsDeveloper {
+        .picture {
+            display: none;
+        }
+        .listText {
+            width: 100%;
+            margin-top: 3px;
+        }
+        .infoTextIp {
+            margin-top: 33px;
+        }
+    }
+    .shop {
+        .shopName {
+            display: block;
+        }
+        .connectedCurrrencies {
+            .listCurrenceis {
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        padding-right: 75px;
+                        flex-wrap: wrap;
+                        .col {
+                            width: calc(40% - 36px);
+                            &.currenceisName {
+                            }
+
+                            &.currenceisTxt {
+                                order: 3;
+                                width: 100% !important;
+                                padding: 15px 0;
+                            }
+                        }
+                    }
+                    .btn {
+                        margin-top: 20px;
+                    }
+                    .descCurrenceis {
+                        padding: 15px;
+                        .inputLine {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .shopInfo {
+        }
+        .shopTabs {
+            margin-top: 30px;
+            .listLinks {
+                display: none !important;
+            }
+            .tabsBody {
+                min-height: auto !important;
+            }
+            .shopSettings {
+                .inputForm {
+                    padding: 15px 0;
+                }
+            }
+            .timeAdress {
+                .inputForm {
+                    .inputLine {
+                        width: 100%;
+                    }
+                }
+            }
+            .tableAdress {
+            }
+            .shopOperation {
+                padding: 15px 0;
+            }
+        }
+        .shopState {
+        }
+    }
+    /*animations*/
+    #canvas {
+        display: none;
+    }
+    .modalsScroll {
+        .closeModal {
+            right: 20px;
+            top: 29px;
+        }
+    }
+    .modalsContent {
+        padding: 20px 20px 30px !important;
+        .capSite {
+            margin-bottom: 50px;
+            position: static;
+            font-size: 30px;
+        }
+        .inputForm {
+            padding: 0 35px;
+        }
+        @include before {
+            display: none;
+        }
+        @include after {
+            height: 100%;
+        }
+    }
+}

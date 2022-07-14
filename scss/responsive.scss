@@ -1,0 +1,114 @@
+// 1900px
+@media (max-width: 1900px) {
+    .createShopBlock {
+        .inputForm {
+            .inputLine {
+                .impTxt {
+                    top: calc(100% + 5px);
+                }
+            }
+        }
+    }
+    .shops {
+        .shopList {
+            .shopItem {
+                .col {
+                    padding-left: 55px;
+                    // width: 20%;
+                    width: calc((100% - 105px - 345px) / 3);
+                    &:nth-child(6) {
+                        left: 30px;
+                        margin-top: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1799px
+@media (max-width: $maxMediaFHD) {
+    .youBalance {
+        padding: 28px 35px 28px 114px;
+        .listBalance {
+            padding: 0 75px;
+        }
+    }
+    .cabMenu {
+        .grettingsCab .line {
+            padding-left: 80px;
+        }
+        .menuCab {
+            li {
+                a {
+                    padding-left: 80px;
+                }
+            }
+        }
+        .btnLine {
+            .btn {
+                max-width: 100%;
+                & + .btn {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .cabContent {
+        padding: 30px;
+    }
+    .hideZeroBalance {
+        right: 30px;
+        top: 45px;
+    }
+    .cabTop {
+        padding: 0 30px 0 30px;
+    }
+    .yourStores {
+        .yourStoresList {
+            .item {
+                .col {
+                    padding-left: 55px;
+                }
+            }
+        }
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsCol {
+            }
+            .walletsInfo {
+                padding: 25px 55px 20px 0;
+            }
+        }
+    }
+    .settingsPage {
+        .inputForm {
+            padding: 95px 70px 50px 70px!important;
+        }
+    }
+    .shop {
+        .connectedCurrrencies {
+            .listCurrenceis {
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        padding-right: 35px;
+                    }
+                    .btn {
+                        max-width: 129px;
+                    }
+                }
+            }
+        }
+    }
+    /*animations*/
+    #canvas {
+        margin-left: -410px;
+    }
+    .youBalance {
+        .listBalance {
+            width: calc(75% - 2px);
+        }
+    }
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='UTF-8'>
+    <title>Модальные окна</title>
+
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
+    <style>
+        body {
+            padding: 15px 0;
+        }
+
+        .openMod:hover {
+            text-decoration-color: #000;
+        }
+
+        .openMod+.openMod {
+            margin-top: 25px;
+        }
+
+        .openMod {
+            cursor: pointer;
+            display: table;
+            margin: 15px auto;
+            border: 0;
+            background: transparent;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button class="openMod" data-modal="modal_restore">восстановить пароль</button>
+    <button class="openMod" data-modal="modal_login">Вход в кабинет</button>
+    <button class="openMod" data-modal="modal_reg">Регистрация</button>
+    <button class="openMod" data-modal="modal_getcrypto">Получить Bitcoin</button>
+    <button class="openMod" data-modal="modal_createwallet">Создать кошелек</button>
+    <button class="openMod" data-modal="modal_developer">Выставление счета на оплату</button>
+    <button class="openMod" data-modal="modal_send">Отправить bitcoin</button>
+
+    <div class="modalsScroll">
+        <div class="modals table">
+            <div class="middle tCell">
+                <div class="blockMod" id="modal_restore">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="restoreModals modalsContent">
+                                <h2 class="capSite">Восстановить пароль</h2>
+                                <div class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">E-mail<span class="imp">*</span></label>
+                                        <input type="mail">
+                                    </div>
+                                    <button class="btn btnYellow btnBorder">Восстановить пароль</button>
+                                </div>
+                                <span class="text">
+                                    Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда <a href="#"
+                                        class="linkSite">приемлемые
+                                        модификации</a>, например, юмористические вставки или слова, которые даже
+                                    отдалённо не
+                                    напоминают латынь.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_login">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="loginModals modalsContent">
+                                <h2 class="capSite">Вход в кабинет</h2>
+                                <div class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">E-mail<span class="imp">*</span></label>
+                                        <input type="mail">
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Пароль<span class="imp">*</span></label>
+                                        <input type="password">
+                                    </div>
+                                    <div class="lineHandler">
+                                        <div class="captchaBlock">
+                                            <img src="img/pic_captcha.jpg" alt="">
+                                        </div>
+                                        <button class="btn btnYellow btnBorder">Войти в кабинет</button>
+                                    </div>
+                                </div>
+                                <div class="linksModals">
+                                    <a href="#" class="linkSite">Восстановить пароль</a>
+                                    <a href="#" class="linkSite">Регистрация </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_reg">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="loginModals modalsContent">
+                                <h2 class="capSite">Регистрация</h2>
+                                <div class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">E-mail<span class="imp">*</span></label>
+                                        <input type="mail">
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Пароль<span class="imp">*</span></label>
+                                        <input type="password">
+                                    </div>
+                                    <div class="checkBlock">
+                                        <input type="checkbox" id="chk">
+                                        <label for="chk">Согласен с
+                                            <a href="#" class="linkSite">правилами и соглашениями</a></label>
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Повторить пароль<span class="imp">*</span></label>
+                                        <input type="password">
+                                    </div>
+                                    <div class="lineHandler">
+                                        <div class="captchaBlock">
+                                            <img src="img/pic_captcha.jpg" alt="">
+                                        </div>
+                                        <button class="btn btnYellow btnBorder">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                                <div class="linksModals">
+                                    <a href="#" class="linkSite">Восстановить пароль</a>
+                                    <a href="#" class="linkSite">Уже есть аккаунт? </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_getcrypto">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="getCryptoModals modalsContent">
+                                <h2 class="capSite">Получить Bitcoin</h2>
+                                <div class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">Валюта:<span class="imp">*</span></label>
+                                        <select class="selectricBl selectricPic">
+                                            <option value="coin1" data-image="img/pic_val1.png">Bitcoin BTC
+                                            </option>
+                                            <option value="coin2" data-image="img/pic_val2.png">ETH
+                                            </option>
+                                            <option value="coin3" data-image="img/pic_val3.png">TRX
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Кошелек:<span class="imp">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Адрес кошелька:<span class="imp">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="lineHandler">
+                                        <div class="inputLine">
+                                            <label for="">QR код:</label>
+                                            <div class="picQRcode" style="background-image: url(img/pic_google.jpg);">
+                                            </div>
+                                            <a href="#" class="linkSite copyRef"
+                                                data-clipboard-text="1234567890">Скопировать</a>
+                                            <div class="copyMessage">Код скопирован</div>
+                                        </div>
+                                        <button class="btn btnYellow btnBorder">Продолжить</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_createwallet">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="createWalletModal modalsContent">
+                                <h2 class="capSite">Создать<br> кошелек</h2>
+                                <div class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">Название кошелька:<span class="imp">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">Выбор валюты:<span class="imp">*</span></label>
+                                        <select class="selectricBl selectricPic">
+                                            <option value="coin1" data-image="img/pic_val1.png">Bitcoin BTC
+                                            </option>
+                                            <option value="coin2" data-image="img/pic_val2.png">ETH
+                                            </option>
+                                            <option value="coin3" data-image="img/pic_val3.png">TRX
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btnYellow btnBorder">Создать кошелек</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_developer">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="develModal modalsContent">
+                                <h2 class="capSite">Выставление счета<br> на оплату</h2>
+                                <div class="code">
+                                    <img src="img/code.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockMod" id="modal_send">
+                    <div class="in">
+                        <span class="closeModal">
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="modalsContentWrap bgWhite">
+                            <div class="sendCoinModal modalsContent">
+                                <h2 class="capSite">Отправить Bitcoin</h2>
+                                <form class="inputForm">
+                                    <div class="inputLine">
+                                        <label for="">Валюта:<span class="imp">*</span></label>
+                                        <select class="selectricBl selectricPic">
+                                            <option value="coin1" data-image="img/pic_val1.png">Bitcoin BTC
+                                            </option>
+                                            <option value="coin2" data-image="img/pic_val2.png">ETH
+                                            </option>
+                                            <option value="coin3" data-image="img/pic_val3.png">TRX
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="inputLine">
+                                        <label for="">От:</label>
+                                        <input type="text" value="Private Key Wallet (bc1qeq8ucdp42323212132321323)">
+                                    </div>
+                                    <div class="inputLine inputTo">
+                                        <label for="">Кому:</label>
+                                        <input type="text" value="" placeholder="Вставьте скан или выделите">
+                                        <button class="btnScan"></button>
+                                    </div>
+                                    <div class="inputList">
+                                        <label for="">Количество:</label>
+                                        <div class="inputLine error">
+                                            <input type="text" value="$222222">
+                                            <span class="cur">USD</span>
+                                            <span class="message">Недостаточно средств</span>
+                                        </div>
+                                        <div class="znak">=</div>
+                                        <div class="inputLine">
+                                            <input type="text" value="0.00567365">
+                                            <span class="cur">BTC</span>
+                                        </div>
+                                    </div>
+                                    <div class="inputLine inputDesc">
+                                        <label for="">Описание: <span class="info"></span> </label>
+                                        <textarea placeholder="Введите текст описания..."></textarea>
+                                    </div>
+                                    <div class="inputLine inputCommision">
+                                        <label for="">Сетевая комиссия: <span class="comm">Reg:3</span>, <span
+                                                class="comm">Priority: 8</span></label>
+                                        <select class="selectricBl">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        <div class="valueBlock">
+                                            <span class="value">0 BTC (0.00 $)</span>
+                                            <a href="#" class="linkSite">Настройка комиссии</a>
+                                        </div>
+                                        <span class="descTxt">Эта функция рекомендуется только для опытных
+                                            пользователей. Выбирая пользовательскую комиссию вы рискуете переплатить или
+                                            ваша транзакция не подтвердится.</span>
+                                    </div>
+                                    <span class="txtTime">Ориентировочное время подтверждения не менее 1 часа.</span>
+                                    <div class="btnLine">
+                                        <div class="checkBlock">
+                                            <input type="checkbox" id="curAll">
+                                            <label for="curAll">Отправить всю сумму</label>
+                                        </div>
+                                        <button class="btn btnYellow btnBorder">Продолжить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlayModal"></div>
+    </div>
+
+</body>
+
+<script type='text/javascript' src='js/jquery-3.6.0.min.js'></script>
+<script type='text/javascript' src='js/jquery.selectric.min.js'></script>
+<script type='text/javascript' src='js/jquery.tabslet.min.js'></script>
+<script type='text/javascript' src='js/clipboard.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui.min.js'></script>
+<script type='text/javascript' src='js/slick.min.js'></script>
+<script type='text/javascript' src='js/ion.rangeSlider.min.js'></script>
+<script type='text/javascript' src='js/modal.js'></script>
+<script type='text/javascript' src='js/script.js'></script>
+
+</html>

@@ -1,0 +1,698 @@
+// 1439px
+@media (max-width: $maxMediaSD) {
+    .container {
+        width: $containerSD;
+        padding: 0 18px;
+    }
+    .header {
+        padding: 19px 0 0;
+        .headerWrap {
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            .nav {
+                width: calc(100% - 285px);
+                max-width: inherit;
+                display: flex;
+                justify-content: flex-end;
+                padding-left: 0;
+                .navList {
+                    padding-left: 0;
+                    margin: 0;
+                }
+            }
+            .langBlock {
+                order: 2;
+                margin-left: 29px;
+            }
+        }
+        &::before {
+            margin-left: -916px;
+        }
+        &:after {
+            width: 15%;
+        }
+    }
+    .nav {
+        .navList {
+            justify-content: space-between;
+            li {
+                a {
+                }
+                & + li {
+                }
+            }
+        }
+    }
+    .authBlock {
+        .signUp {
+            padding: 7px 25px;
+        }
+    }
+    .grettingsBlock {
+        padding: 85px 0 97px;
+        .grettingCap {
+            font-size: 60px;
+            line-height: 70px;
+            max-width: 49%;
+            & + .grettingText {
+                margin-top: 33px;
+            }
+        }
+        .grettingText {
+            padding-right: 0;
+        }
+        .btn {
+            margin-top: 66px;
+        }
+    }
+    .stateLine {
+        padding: 61px 0 0;
+        .stateList {
+            max-width: calc(50% + 224px);
+            .item {
+                .iconBl {
+                }
+                .name {
+                }
+                .txt {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .textBlockWrap {
+        padding: 83px 0 93px;
+        .wrap {
+            .textBlock {
+                width: calc(50% - 13px);
+                .capSite {
+                    & + ul {
+                        margin-top: 55px;
+                    }
+                }
+                ul {
+                    li {
+                        line-height: 24px;
+                        & + li {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+            .picture {
+                top: 25px;
+                left: -8px;
+                background-size: 97%;
+            }
+        }
+    }
+    .cryptoBlock {
+        padding: 73px 0 80px;
+        .wrap {
+            .cryptoList {
+                display: block;
+                width: calc(100% + 43px);
+                position: relative;
+                margin: 56px 0 0;
+                left: -24px;
+                .cryptoItem {
+                    padding: 15px;
+                    .item {
+                        @include box-shadow($shadow3);
+                        & + .item {
+                            margin-top: 29px;
+                        }
+                    }
+                }
+                .slick-prev {
+                    color: transparent;
+                    background-image: url("../img/arrow_left.png");
+                    width: 53px;
+                    height: 11px;
+                    position: absolute;
+                    left: 15px;
+                    bottom: 5px;
+                }
+                .slick-next {
+                    color: transparent;
+                    background-image: url("../img/arrow_right.png");
+                    width: 53px;
+                    height: 11px;
+                    position: absolute;
+                    right: 15px;
+                    bottom: 5px;
+                }
+                .slick-dots {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 29px;
+                    li {
+                        cursor: pointer;
+                        margin: 0 5px;
+                        color: transparent;
+                        @include border-radius(50%);
+                        background-color: $colorWhite;
+                        width: 22px;
+                        height: 22px;
+                        border: dashed 1px $textColor6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include transition(all 0.3s);
+                        button {
+                            cursor: pointer;
+                            color: transparent;
+                            background: transparent;
+                            @include border-radius(50%);
+                            width: 8px;
+                            height: 8px;
+                            @include transition(all 0.3s);
+                        }
+                        &.slick-active {
+                            button {
+                                background-color: $colorBlack;
+                            }
+                        }
+                    }
+                }
+            }
+            .cryptoDesc {
+                max-width: 45%;
+            }
+        }
+    }
+    .howConnectBlock {
+        padding: 48px 0 30px;
+    }
+    .whyBlock {
+        margin-bottom: -40px;
+    }
+    .whyTabs {
+        &.tabs {
+            .listLinks {
+                li {
+                    a {
+                        .iconBl {
+                        }
+                        @include before {
+                        }
+                    }
+                }
+            }
+        }
+        .textBlockWrap {
+            .wrap {
+                .picture {
+                    top: -71px;
+                    left: 20px;
+                    height: 486px;
+                    background-size: 93%;
+                }
+            }
+        }
+    }
+    .footer {
+        &::before {
+            margin-left: -1075px;
+        }
+        .footerWrap {
+            .footerLeft {
+                .footerInfo {
+                    margin-top: 62px;
+                }
+            }
+            .footerRight {
+                max-width: 64%;
+            }
+        }
+    }
+    .innerPage {
+        .header {
+            &:before {
+                top: -200px;
+                margin-left: -1235px;
+                height: 694px;
+            }
+        }
+    }
+    .grettingsPage {
+        .grettingCap {
+            max-width: 100%;
+        }
+    }
+    .joinBl {
+        padding: 15px;
+        .btn {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .mershPage {
+        .mersInfoWrap {
+            .infoMersh {
+                li {
+                    padding-left: 137px;
+                    width: calc(100% / 3 - 45px);
+                    .picture {
+                        left: -49px;
+                    }
+                }
+            }
+        }
+    }
+    .cabTop {
+        padding: 0 0px 0 12px;
+    }
+    .youBalance {
+        width: calc(100% - 230px);
+        padding: 24px 15px 28px 95px;
+        .listBalance {
+            width: calc(65% - 2px);
+        }
+        .balance {
+            width: auto;
+            .valBalance {
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    .cabMenu {
+        width: 18%;
+        .menuCab {
+            li {
+                a {
+                    padding-left: 65px;
+                    .iconBl {
+                        left: 12px;
+                    }
+                }
+            }
+        }
+        .grettingsCab {
+            .line {
+                padding-left: 65px;
+                padding-right: 10px;
+                .iconBl {
+                    left: 12px;
+                }
+            }
+        }
+    }
+    .cabContent {
+        width: 82%;
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .tableTitMob {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .cabTable {
+        display: block;
+        background: transparent;
+        @include box-shadow(none);
+        width: calc(100% + 30px);
+        left: -15px;
+        position: relative;
+        .cabThead {
+            display: none;
+        }
+        .cabTbody {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: transparent;
+            .cabTr {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: calc(50% - 10px);
+                background-color: $colorWhite;
+                @include border-radius(20px);
+                @include box-shadow($shadow3);
+                margin-bottom: 20px;
+                .cabTd {
+                    border: 0;
+                    border-bottom: dashed 1px #afaaa9;
+                    width: 50% !important;
+                    padding: 15px 30px !important;
+                }
+            }
+        }
+        .slick-prev {
+            color: transparent;
+            background-image: url("../img/arrow_left.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+        }
+        .slick-next {
+            color: transparent;
+            background-image: url("../img/arrow_right.png");
+            width: 53px;
+            height: 11px;
+            position: absolute;
+            right: 15px;
+            bottom: 5px;
+        }
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 25px;
+            li {
+                cursor: pointer;
+                margin: 0 5px;
+                color: transparent;
+                @include border-radius(50%);
+                width: 22px;
+                height: 22px;
+                border: dashed 1px $textColor6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include transition(all 0.3s);
+                button {
+                    cursor: pointer;
+                    color: transparent;
+                    background: transparent;
+                    @include border-radius(50%);
+                    width: 8px;
+                    height: 8px;
+                    @include transition(all 0.3s);
+                }
+                &.slick-active {
+                    button {
+                        background-color: $colorBlack;
+                    }
+                }
+            }
+        }
+        .copyMessage {
+            top: calc(100% - 31px);
+            left: 6px;
+            width: calc(100% - 31px);
+        }
+    }
+    .tableCryptoBalance {
+        .cabTable {
+            .cabTbody {
+                .cabTr {
+                    margin: 15px;
+                }
+                .cabTd {
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        background-color: $back1;
+                    }
+                    &:nth-child(7) {
+                        width: 100% !important;
+                    }
+                    &:nth-child(8) {
+                        width: 100% !important;
+                        border: 0;
+                    }
+                    .txt,
+                    .value,
+                    .well {
+                        min-height: 30px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .tableCryptoHistory {
+        .cabTable {
+            margin-top: 30px;
+            .cabTbody {
+                .cabTr {
+                    margin: 15px;
+                }
+                .cabTd {
+                    &:nth-child(5) {
+                        border: 0;
+                    }
+                    &:nth-child(6) {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+    .tableStoreHistory {
+        .cabTable {
+            margin-top: 30px;
+            .cabTbody {
+                .cabTr {
+                    margin: 15px;
+                }
+                .cabTd {
+                    &:nth-child(6) {
+                        width: 100% !important;
+                        border: 0;
+                        order: 2;
+                    }
+                    .txt {
+                        max-width: 100%;
+                    }
+                }
+                .tableTitMob {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .tableTransaction {
+        .cabTable {
+            margin-top: 30px;
+            .cabTbody {
+                .cabTr {
+                    margin: 15px;
+                }
+                .cabTd {
+                    &:nth-child(6) {
+                        width: 100% !important;
+                        border: 0;
+                        order: 2;
+                    }
+                    .txt {
+                        max-width: 100%;
+                    }
+                }
+                .tableTitMob {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .tableAdress {
+        .cabTable {
+            .cabTbody {
+                .cabTr {
+                    margin: 15px;
+                }
+                .cabTd {
+                    &:nth-child(5) {
+                        width: 100% !important;
+                        border: 0;
+                    }
+                }
+                .tableTitMob {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .createStore {
+        top: 75px;
+    }
+    .cabinetBanners {
+        .listBanners {
+            margin: 50px 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 53px 50px;
+        }
+        .text {
+            margin-bottom: 30px;
+        }
+        textarea {
+            width: 100%;
+        }
+        .btn {
+            padding: 15px 30px;
+            left: 15px;
+            margin-top: 25px;
+        }
+    }
+    .settingsPage {
+        .settingLeft,
+        .settingRight {
+            width: calc(50% - 15px);
+            .inputForm {
+                min-height: inherit;
+            }
+        }
+    }
+    .supportBlock {
+        flex-wrap: wrap;
+
+        .supportLeft {
+            width: 100%;
+            .contactsInfo {
+                padding: 50px 0;
+                .contactsList {
+                    row-gap: 40px;
+                }
+            }
+            .textInfo {
+                max-width: 100%;
+                margin-top: 30px;
+            }
+        }
+        .supportRight {
+            width: 100%;
+            .inputForm {
+                padding: 30px;
+            }
+        }
+    }
+    .shops {
+        padding: 30px 0;
+        .shopList {
+            .shopItem {
+                .shopBalance {
+                    padding: 25px 25px 25px 100px;
+                    flex-wrap: wrap;
+                    .shopBalanceList {
+                        width: 50%;
+                        .shopBalanceItem {
+                            &::before {
+                                display: none;
+                            }
+                            & + .shopBalanceItem {
+                                margin-left: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .createShopBlock {
+        align-items: flex-start;
+        padding: 40px;
+        .inputForm {
+            .inputLine {
+                width: 100%;
+                .impTxt {
+                    top: 3px;
+                }
+            }
+        }
+    }
+    .docsDeveloper {
+        .picture {
+            background-size: contain;
+        }
+    }
+    .shop {
+        .connectedCurrrencies {
+            .listCurrenceis {
+                .itemCurrenceis {
+                    .infoCurrenceis {
+                        padding-right: 75px;
+                        flex-wrap: wrap;
+                        .col {
+                            width: calc(25% - 36px);
+                            &.currenceisName {
+                            }
+
+                            &.currenceisTxt {
+                                order: 3;
+                                width: 100% !important;
+                                padding: 15px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shopInfo {
+            padding: 30px 0 0;
+            flex-wrap: wrap;
+            .item {
+                margin-bottom: 21px;
+                width: calc(50% - 11px);
+            }
+        }
+        .shopTabs {
+            .shopSettings {
+                padding: 30px 0;
+                .impTxt {
+                    top: 100%;
+                }
+            }
+            .timeAdress {
+                padding: 0;
+                .inputForm {
+                    padding: 30px 15px;
+                    flex-wrap: wrap;
+                }
+            }
+            .tableAdress {
+                width: 100%;
+                padding: 30px 0 0;
+                .cabTable {
+                    .cabTd {
+                        min-width: inherit;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .shopState {
+            flex-wrap: wrap;
+            .item {
+                margin-bottom: 18px;
+                width: calc(50% - 9px);
+            }
+        }
+    }
+    /*animations*/
+    #canvas {
+        @include transform(scale(0.9));
+        margin-left: -290px;
+        top: 30px;
+    }
+    .walletsList {
+        .walletsItem {
+            .walletsInfo {
+                .walletsCol {
+                    &.coinName {
+                        width: 210px;
+                    }
+                    &.walletName {
+                        width: calc(20% - 5px);
+                    }
+                }
+            }
+        }
+    }
+}
